@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydomain.com/button.schema.json",
+  "title": "Button",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "default": "Lorem ipsum"
+    },
+    "href": {
+      "type": "string",
+      "default": "#"
+    },
+    "icon": {
+      "type": "string",
+      "enum": ["chevron-right", "close", "none"],
+      "default": "chevron-right"
+    },
+    "variant": {
+      "type": "string",
+      "enum": ["solid", "clear", "outline"],
+      "default": "solid"
+    }
+  },
+  "required": ["href", "label", "variant"],
+  "additionalProperties": false
+}

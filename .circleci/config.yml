@@ -1,0 +1,97 @@
+version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: cimg/node:16.14
+  working_directory: /mnt/ramdisk
+  resource_class: medium+
+
+aliases:
+  - &save-cache-yarn
+    key: yarn-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+    paths:
+      - .yarn-cache
+  - &restore-cache-yarn
+    keys:
+      - yarn-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      - yarn-{{ checksum "yarn.lock" }}
+  - &save-cache-node
+    key: node-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+    paths:
+      - node_modules
+  - &restore-cache-node
+    keys:
+      - node-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      - node-{{ checksum "yarn.lock" }}
+      - node-
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-cache-yarn
+      - restore_cache: *restore-cache-node
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile --cache-folder /mnt/ramdisk/.yarn-cache
+      - save_cache: *save-cache-yarn
+      - save_cache: *save-cache-node
+
+  release:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-cache-node
+      - run:
+          name: Create Release
+          command: yarn auto shipit
+
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-cache-node
+      - run:
+          name: Build Storybook
+          command: yarn build-storybook
+      - persist_to_workspace:
+          root: .
+          paths:
+            - storybook
+      - run:
+          name: Compress storybook folder
+          command: tar -czf storybook.tar.gz storybook
+      - store_artifacts:
+          path: storybook.tar.gz
+
+  chromatic:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore-cache-node
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy Storybook
+          command: yarn chromatic
+
+workflows:
+  release:
+    jobs:
+      - install
+
+      - release:
+          context: UnistartDS
+          requires:
+            - install
+
+      - build:
+          context: UnistartDS
+          requires:
+            - install
+
+      - chromatic:
+          context: UnistartDS
+          requires:
+            - build

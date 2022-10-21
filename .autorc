@@ -1,0 +1,9 @@
+{
+  "author": "Jonas Ulrich <jonas.ulrich@kickstartds.com>",
+  "baseBranch": "main",
+  "versionBranches": "support/",
+  "plugins": [
+    "npm",
+    "released"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "ks": {
+    "border-width": {
+      "default": {
+        "value": "1px"
+      },
+      "emphasized": {
+        "value": "2px"
+      }
+    },
+    "border-radius": {
+      "control": {
+        "value": "2px",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      },
+      "card": {
+        "value": "2px",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      },
+      "surface": {
+        "value": "4px",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      },
+      "pill": {
+        "value": "999px",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      },
+      "circle": {
+        "value": "50%",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      }
+    }
+  }
+}
