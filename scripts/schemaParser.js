@@ -56,7 +56,6 @@ const dereference = async (schemaPath) => {
   const schema = await parse(schemaPath);
   mergeAnyOfEnums(schema);
 
-  // if (schema.$id.includes('section')) delete schema.allOf[0].properties.background;
   const merged = merge(schema, { ignoreAdditionalProperties: true });
   return merged;
 };

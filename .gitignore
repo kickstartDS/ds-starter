@@ -1,10 +1,13 @@
+# Node
 .DS_Store
 .env
 node_modules
 
+# Storybook
+storybook-static
+
 # kickstartDS
 static/index.css.map
-storybook-static
 /storybook
 *.dereffed.json
 *-tokens.json
@@ -12,6 +15,7 @@ src/token/tokens.css
 src/token/icons/IconSprite.js
 src/token/storybook/tokens.js
 src/token/storybook/tokens.css
+src/token/storybook/icons.svg
 src/token/icons/icon-sprite.html
 static/index.css
 static/manager.css

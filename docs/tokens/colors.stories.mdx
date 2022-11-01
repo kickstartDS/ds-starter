@@ -1,74 +1,62 @@
-import { Meta } from "@storybook/addon-docs";
-import { DesignTokenDocBlock } from "storybook-design-token/dist/doc-blocks";
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
 
 <Meta title="Design Tokens/Colors" />
 
 # Colors
 
-## Text
+### Primary
 
-### Text Default
+<DesignTokenDocBlock categoryName="Colors: Primary" viewType="table" />
 
-<DesignTokenDocBlock
-  categoryName="Colors: Text Default"
-  maxHeight={600}
-  viewType="card"
-/>
+### Foreground
 
-### Text Primary
-
-<DesignTokenDocBlock
-  categoryName="Colors: Text Primary"
-  maxHeight={600}
-  viewType="card"
-/>
-
-### Text Interface
-
-<DesignTokenDocBlock
-  categoryName="Colors: Text Interface"
-  maxHeight={600}
-  viewType="card"
-/>
+<DesignTokenDocBlock categoryName="Colors: Foreground" viewType="table" />
 
 ## Background
 
-### Background Default
-
-<DesignTokenDocBlock
-  categoryName="Colors: Background Default"
-  maxHeight={600}
-  viewType="card"
-/>
-
-### Background Primary
-
-<DesignTokenDocBlock
-  categoryName="Colors: Background Primary"
-  maxHeight={600}
-  viewType="card"
-/>
-
-### Background Interface
-
-<DesignTokenDocBlock
-  categoryName="Colors: Background Interface"
-  maxHeight={600}
-  viewType="card"
-/>
-
-### Background Accent
+### Accent
 
 <DesignTokenDocBlock
   categoryName="Colors: Background Accent"
-  maxHeight={600}
-  viewType="card"
+  viewType="table"
 />
 
-### Background Clear
+### Clear
+
+<DesignTokenDocBlock categoryName="Colors: Background Clear" viewType="table" />
+
+### Default
 
 <DesignTokenDocBlock
-  categoryName="Colors: Background Clear"
-  maxHeight={600}
-  viewType="card"
+  categoryName="Colors: Background Default"
+  viewType="table"
 />
+
+### Interface
+
+<DesignTokenDocBlock
+  categoryName="Colors: Background Interface"
+  viewType="table"
+/>
+
+### Primary
+
+<DesignTokenDocBlock
+  categoryName="Colors: Background Primary"
+  viewType="table"
+/>
+
+## Text
+
+### Default
+
+<DesignTokenDocBlock categoryName="Colors: Text Default" viewType="table" />
+
+### Interface
+
+<DesignTokenDocBlock categoryName="Colors: Text Interface" viewType="table" />
+
+### Primary
+
+<DesignTokenDocBlock categoryName="Colors: Text Primary" viewType="table" />

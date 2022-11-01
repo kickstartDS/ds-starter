@@ -1,5 +1,7 @@
 import { actions } from "@storybook/addon-actions";
 import { DocsContainer } from "@storybook/addon-docs";
+// TODO is this actually needed, when it's also imported as part of `src/dist.js`?
+// feels like one should be able to go?
 // @see https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/attrchange
 import "lazysizes/plugins/attrchange/ls.attrchange";
 import {

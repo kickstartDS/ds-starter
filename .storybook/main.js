@@ -21,6 +21,7 @@ module.exports = {
   ],
   framework: "@storybook/react",
   staticDirs: ["../static"],
+  // https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-implicit-postcss-loader
   features: {
     postcss: false,
   },
