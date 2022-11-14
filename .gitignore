@@ -7,16 +7,11 @@ node_modules
 storybook-static
 
 # kickstartDS
-static/index.css.map
-/storybook
 *.dereffed.json
 *-tokens.json
-src/token/tokens.css
-src/token/icons/IconSprite.js
-src/token/storybook/tokens.js
-src/token/storybook/tokens.css
-src/token/storybook/icons.svg
-src/token/icons/icon-sprite.html
-static/index.css
-static/manager.css
+src/token
+!src/token/dictionary
+!src/token/branding-token.json
+static/*.css
+static/*.css.map
 dist

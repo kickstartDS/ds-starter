@@ -5,9 +5,8 @@ const sass = require("sass");
 
 const createTokens = (scssPath) => {
   try {
-    const result = sass.renderSync({
-      file: scssPath,
-      includePaths: ["node_modules"],
+    const result = sass.compile(scssPath, {
+      loadPaths: ["node_modules"],
     });
     const dest = scssPath.replace(
       /(.*\/)_?(.*)-tokens\.scss/,

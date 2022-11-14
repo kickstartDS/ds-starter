@@ -1,12 +1,6 @@
 import { actions } from "@storybook/addon-actions";
 import { DocsContainer } from "@storybook/addon-docs";
-// TODO is this actually needed, when it's also imported as part of `src/dist.js`?
-// feels like one should be able to go?
-// @see https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/attrchange
-import "lazysizes/plugins/attrchange/ls.attrchange";
-import {
-  unpackDecorator,
-} from "@kickstartds/core/lib/storybook/helpers";
+import { unpackDecorator } from "@kickstartds/core/lib/storybook/helpers";
 
 import "@kickstartds/base/lib/global/base.js";
 import "@kickstartds/base/lib/global/base.css";
@@ -35,17 +29,7 @@ export const parameters = {
     },
   },
   options: {
-    storySort(a, b) {
-      // welcome page to top!
-      if (a[0].includes("welcome")) {
-        return -1;
-      }
-
-      // alphabetically
-      return a[1].kind === b[1].kind
-        ? 0
-        : a[1].id.localeCompare(b[1].id, undefined, { numeric: true });
-    },
+    storySort: { order: ["Docs", ["Welcome"]] },
   },
   designToken: {
     disable: true,
@@ -61,7 +45,10 @@ export const parameters = {
     ),
   },
   playroom: {
-    url: process.env.NODE_ENV === 'production' ? 'http://localhost:9000/playroom/' : 'http://localhost:9000',
+    url:
+      process.env.NODE_ENV === "production"
+        ? "http://localhost:9000/playroom/"
+        : "http://localhost:9000",
   },
 };
 

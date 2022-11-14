@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import * as tokens from '../src/token/storybook/tokens';
+import * as tokens from '../src/token/tokens';
 
 export const light = create({
   base: "light",

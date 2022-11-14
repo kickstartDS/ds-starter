@@ -2,6 +2,16 @@
   "name": "@kickstartds/ds-starter-wip",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/kickstartDS/ds-starter-wip#readme",
+  "bugs": {
+    "url": "https://github.com/kickstartDS/ds-starter-wip/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kickstartDS/ds-starter-wip.git"
+  },
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "types": "dist/types.d.ts",
   "files": [
@@ -9,7 +19,7 @@
   ],
   "scripts": {
     "build-storybook": "yarn build-tokens && run-p sass sass-manager schema && build-storybook --output-dir storybook",
-    "build-tokens": "kickstartDS tokens compile --cleanup --rc-only --token-path src/token/dictionary",
+    "build-tokens": "kickstartDS tokens compile",
     "chromatic": "chromatic --storybook-build-dir 'storybook' --skip \"@(renovate/**|dependabot/**)\" --exit-zero-on-changes --exit-once-uploaded",
     "dist:components": "node scripts/bundleComponents.js",
     "dist:fonts": "cp -r static/fonts dist/",
@@ -17,36 +27,37 @@
     "dist:images": "cp -r static/img static/logo.svg dist/",
     "dist:favicons": "cp -r static/favicon dist/",
     "dist:sass": "sass --load-path=node_modules src/dist.scss dist/index.css",
-    "dist:schema": "yarn schema && node scripts/copySchema.js && yarn typings",
+    "dist:schema": "yarn schema && node scripts/copySchema.js && yarn tsc",
     "dist:js": "esbuild index=src/dist.js --outdir=dist --format=esm --bundle --minify --splitting",
-    "init-tokens": "kickstartDS tokens init --cleanup --rc-only --token-path src/token/dictionary",
+    "init-tokens": "kickstartDS tokens init",
     "playroom": "run-p watch:* playroom:start",
     "playroom:start": "playroom start",
     "playroom:build": "playroom build",
     "prepublishOnly": "rm -rf dist && mkdir -p dist && yarn build-tokens && run-p dist:*",
     "sass": "sass --load-path=node_modules src/index.scss static/index.css",
     "sass-manager": "sass --load-path=node_modules .storybook/manager.scss static/manager.css",
-    "schema": "node scripts/schema.js",
+    "schema": "run-p schema:*",
+    "schema:dereference": "kickstartDS schema dereference --schema-domain schema.mydomain.com",
+    "schema:generate-props": "kickstartDS schema types --schema-domain schema.mydomain.com",
     "start": "run-p watch:* storybook",
     "storybook": "start-storybook -p 6006",
     "token": "node scripts/customPropertyExtract.js",
-    "typings": "tsc",
     "watch:sass": "yarn sass --watch",
     "watch:sass-manager": "yarn sass-manager --watch",
-    "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema {path}\"",
+    "watch:schema": "yarn schema && chokidar \"src/**/*.schema.json\" -c \"yarn schema\"",
     "watch:token": "yarn build-tokens && yarn token && chokidar \"src/**/*-tokens.scss\" -c \"yarn token {path}\"",
     "watch:dictionary": "chokidar \"src/token/dictionary/*.json\" -c \"yarn build-tokens\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kickstartDS/ds-starter-wip.git"
+  "resolutions": {
+    "@types/react": "17.0.2"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kickstartDS/ds-starter-wip/issues"
+  "dependencies": {
+    "@bedrock-layout/primitives": "^2.2.1",
+    "@kickstartds/base": "2.0.0-canary.922.4954.0",
+    "@kickstartds/content": "2.0.0-canary.922.4954.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "homepage": "https://github.com/kickstartDS/ds-starter-wip#readme",
   "devDependencies": {
     "@auto-it/npm": "^10.37.6",
     "@auto-it/released": "^10.37.6",
@@ -80,7 +91,7 @@
     "json-schema-merge-allof": "^0.8.1",
     "json-schema-ref-parser": "^9.0.9",
     "json-schema-to-typescript": "^11.0.2",
-    "kickstartds": "^0.2.39",
+    "kickstartds": "1.0.0-beta.7",
     "lazysizes": "^5.3.2",
     "npm-run-all": "^4.1.5",
     "playroom": "^0.28.0",
@@ -89,18 +100,8 @@
     "storybook-design-token": "^2.7.1",
     "typescript": "^4.8.4"
   },
-  "dependencies": {
-    "@bedrock-layout/primitives": "^2.2.1",
-    "@kickstartds/base": "2.0.0-canary.922.4954.0",
-    "@kickstartds/content": "2.0.0-canary.922.4954.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "resolutions": {
-    "@types/react": "17.0.2"
-  },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
