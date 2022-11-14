@@ -2197,13 +2197,13 @@
     react-markdown "^8.0.3"
     vhtml "^2.2.0"
 
-"@kickstartds/base@2.0.0-canary.922.4954.0":
-  version "2.0.0-canary.922.4954.0"
-  resolved "https://registry.npmjs.org/@kickstartds/base/-/base-2.0.0-canary.922.4954.0.tgz#ff595cbb2f6fba9ff9922755a96f2850cebcd18b"
-  integrity sha512-CFqzKFQpS1+E2aP32IRmErU2Yw5T/Yk7orWGzLsVcen0hDu4dJWrgGLHkDPaeqGGIgQA8hLoIODsDYZeOXLwzw==
+"@kickstartds/base@1.6.0-canary.1092.5252.0":
+  version "1.6.0-canary.1092.5252.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/base/-/base-1.6.0-canary.1092.5252.0.tgz#0f91980f258a63a38eea96e6cfef960d4bc32010"
+  integrity sha512-NUAGjSQR89lmIc72nwWc0y9Xbu1qmDl7cupC+xMb7+JZURyYrerOnO9UI6c8OSN7kUKTkHHk1PXLhmu3V0Jjzw==
   dependencies:
     "@babel/runtime" "^7.19.0"
-    "@kickstartds/core" "2.0.0-canary.922.4954.0"
+    "@kickstartds/core" "1.6.0-canary.1092.5252.0"
     classnames "^2.2.6"
     date-fns "^2.28.0"
     focus-visible "^5.0.2"
@@ -2223,14 +2223,14 @@
     countup.js "^2.3.2"
     lodash-es "^4.17.21"
 
-"@kickstartds/content@2.0.0-canary.922.4954.0":
-  version "2.0.0-canary.922.4954.0"
-  resolved "https://registry.npmjs.org/@kickstartds/content/-/content-2.0.0-canary.922.4954.0.tgz#26ecb118b7ecffb849e5f29266337cf78ec6770a"
-  integrity sha512-MBLW7IIJKRPC+N1OFzHAkW11Fk89lZeT/zfoOE+2pUF4vCz5omXTMTZbJkVcglG0MH/IWI71/8rLLvc+dCeGPw==
+"@kickstartds/content@1.6.0-canary.1092.5252.0":
+  version "1.6.0-canary.1092.5252.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/content/-/content-1.6.0-canary.1092.5252.0.tgz#dfda1801c53d45acfbd04cd846bc0a80c06369d3"
+  integrity sha512-8/pj001DxyA8sJBiWiLuXCJJAYcJCXY6NItfvwAK9NsVsrnHjuC2VxMM4Oc4lkdoBTLB2VyZWzbtXre2T/2gow==
   dependencies:
     "@babel/runtime" "^7.19.0"
-    "@kickstartds/base" "2.0.0-canary.922.4954.0"
-    "@kickstartds/core" "2.0.0-canary.922.4954.0"
+    "@kickstartds/base" "1.6.0-canary.1092.5252.0"
+    "@kickstartds/core" "1.6.0-canary.1092.5252.0"
     classnames "^2.2.6"
     countup.js "^2.3.2"
     lodash-es "^4.17.21"
@@ -2254,10 +2254,10 @@
     pubsub-js "^1.9.4"
     sass "^1.52.1"
 
-"@kickstartds/core@2.0.0-canary.922.4954.0":
-  version "2.0.0-canary.922.4954.0"
-  resolved "https://registry.npmjs.org/@kickstartds/core/-/core-2.0.0-canary.922.4954.0.tgz#3911e0a7d82543b7d2ffb58b7aef6bbad4f49b7c"
-  integrity sha512-SYh0LQSQCuID7SwSTwddaZyjQDtLFYafHK3Yr2EYl3duzEyOGWg7FGahv16QUeXzs9gbatHVIChO9wsXokjQ8w==
+"@kickstartds/core@1.6.0-canary.1092.5252.0":
+  version "1.6.0-canary.1092.5252.0"
+  resolved "https://registry.yarnpkg.com/@kickstartds/core/-/core-1.6.0-canary.1092.5252.0.tgz#21353118d8d4f2af23a2513ad7b95b11d485c446"
+  integrity sha512-ZuXCT3czrI+Y5ahp50SebkONfC0b2IDhAYHoTujjn/dgfiiLc7a2nJ7JMYuSWSgbyOZRtgeDqklMGZj6hPsLIQ==
   dependencies:
     "@babel/runtime" "^7.19.0"
     bourbon "^7.2.0"

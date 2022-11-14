@@ -11,11 +11,7 @@ export const Button = forwardRef<
 >(({ icon, variant, label, href, ...props }, ref) => (
   <ButtonContextDefault
     {...props}
-    iconBefore={icon ?
-      {
-        icon: icon,
-      } : undefined
-    }
+    iconBefore={icon && icon !== "none" ? { icon } : undefined}
     href={href}
     label={label}
     size={"medium"}

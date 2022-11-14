@@ -1,6 +1,6 @@
 import { actions } from "@storybook/addon-actions";
 import { DocsContainer } from "@storybook/addon-docs";
-import { unpackDecorator } from "@kickstartds/core/lib/storybook/helpers";
+import { unpackDecorator } from "@kickstartds/core/lib/storybook";
 
 import "@kickstartds/base/lib/global/base.js";
 import "@kickstartds/base/lib/global/base.css";
@@ -12,7 +12,7 @@ import Providers from "../src/Providers";
 import { LinkProvider } from "../src/docs/LinkProvider";
 
 const myActions = actions("radio");
-window.rm.radio.on("*", myActions.radio);
+window._ks.radio.on("*", myActions.radio);
 
 const providerDecorator = (Story, context) => (
   <Providers>

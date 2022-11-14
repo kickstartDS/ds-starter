@@ -53,8 +53,8 @@
   },
   "dependencies": {
     "@bedrock-layout/primitives": "^2.2.1",
-    "@kickstartds/base": "2.0.0-canary.922.4954.0",
-    "@kickstartds/content": "2.0.0-canary.922.4954.0",
+    "@kickstartds/base": "1.6.0-canary.1092.5252.0",
+    "@kickstartds/content": "1.6.0-canary.1092.5252.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

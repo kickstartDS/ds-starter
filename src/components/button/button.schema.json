@@ -6,16 +6,16 @@
   "properties": {
     "label": {
       "type": "string",
-      "default": "Lorem ipsum"
+      "examples": ["Lorem ipsum"]
     },
     "href": {
       "type": "string",
-      "default": "#"
+      "examples": ["#"]
     },
     "icon": {
       "type": "string",
       "enum": ["chevron-right", "close", "none"],
-      "default": "chevron-right"
+      "examples": ["chevron-right"]
     },
     "variant": {
       "type": "string",
