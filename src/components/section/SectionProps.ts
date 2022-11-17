@@ -330,10 +330,6 @@ export type Level = "h1" | "h2" | "h3" | "h4" | "h5" | "p";
  */
 export type Style = "none" | "h1" | "h2" | "h3" | "h4" | "h5" | "p";
 /**
- * Add additional spacing to the bottom of the headline
- */
-export type BottomSpacing = "minimum" | "small" | "large";
-/**
  * Text content for the headline
  */
 export type Text = string;
@@ -345,6 +341,10 @@ export type Alignment = "left" | "center" | "right";
  * Text content for the optional subheadline
  */
 export type Subheadline = string;
+/**
+ * Add additional spacing to the bottom of the headline
+ */
+export type BottomSpacing = "minimum" | "small" | "large";
 /**
  * Add additional css classes that should be applied to the headline
  */
@@ -837,10 +837,10 @@ export interface TextBox {
 export interface Headline {
   level?: Level;
   styleAs?: Style;
-  spaceAfter?: BottomSpacing;
   content: Text;
   align?: Alignment;
   subheadline?: Subheadline;
+  spaceAfter?: BottomSpacing;
   className?: AdditionalClasses2;
   component?: KsComponentAttribute6;
   [k: string]: unknown;

@@ -1513,6 +1513,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.20.1":
+  version "7.20.1"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.1.tgz#1148bb33ab252b165a06698fde7576092a78b4a9"
+  integrity sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==
+  dependencies:
+    regenerator-runtime "^0.13.10"
+
 "@babel/runtime@~7.5.4":
   version "7.5.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
@@ -2197,15 +2204,14 @@
     react-markdown "^8.0.3"
     vhtml "^2.2.0"
 
-"@kickstartds/base@1.6.0-canary.1092.5252.0":
-  version "1.6.0-canary.1092.5252.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/base/-/base-1.6.0-canary.1092.5252.0.tgz#0f91980f258a63a38eea96e6cfef960d4bc32010"
-  integrity sha512-NUAGjSQR89lmIc72nwWc0y9Xbu1qmDl7cupC+xMb7+JZURyYrerOnO9UI6c8OSN7kUKTkHHk1PXLhmu3V0Jjzw==
+"@kickstartds/base@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@kickstartds/base/-/base-2.0.2.tgz#89d032bcc6682f28c74e35579d767beef90221aa"
+  integrity sha512-Fr7bN74+g/mmJemLCpTx7aRiCmXAhbsui7wZUhLhKTzxqt0Vi5Sx7XIOdDKRGh2q+QC4wyg5mOtQuFbvXt7aMA==
   dependencies:
-    "@babel/runtime" "^7.19.0"
-    "@kickstartds/core" "1.6.0-canary.1092.5252.0"
-    classnames "^2.2.6"
-    date-fns "^2.28.0"
+    "@babel/runtime" "^7.20.1"
+    "@kickstartds/core" "^2.0.2"
+    classnames "^2.3.2"
     focus-visible "^5.0.2"
     photoswipe "^5.3.2"
     react-markdown "^8.0.3"
@@ -2219,18 +2225,6 @@
     "@babel/runtime" "^7.19.0"
     "@kickstartds/base" "1.6.0-canary.1092.5084.0"
     "@kickstartds/core" "1.6.0-canary.1092.5084.0"
-    classnames "^2.2.6"
-    countup.js "^2.3.2"
-    lodash-es "^4.17.21"
-
-"@kickstartds/content@1.6.0-canary.1092.5252.0":
-  version "1.6.0-canary.1092.5252.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/content/-/content-1.6.0-canary.1092.5252.0.tgz#dfda1801c53d45acfbd04cd846bc0a80c06369d3"
-  integrity sha512-8/pj001DxyA8sJBiWiLuXCJJAYcJCXY6NItfvwAK9NsVsrnHjuC2VxMM4Oc4lkdoBTLB2VyZWzbtXre2T/2gow==
-  dependencies:
-    "@babel/runtime" "^7.19.0"
-    "@kickstartds/base" "1.6.0-canary.1092.5252.0"
-    "@kickstartds/core" "1.6.0-canary.1092.5252.0"
     classnames "^2.2.6"
     countup.js "^2.3.2"
     lodash-es "^4.17.21"
@@ -2254,24 +2248,24 @@
     pubsub-js "^1.9.4"
     sass "^1.52.1"
 
-"@kickstartds/core@1.6.0-canary.1092.5252.0":
-  version "1.6.0-canary.1092.5252.0"
-  resolved "https://registry.yarnpkg.com/@kickstartds/core/-/core-1.6.0-canary.1092.5252.0.tgz#21353118d8d4f2af23a2513ad7b95b11d485c446"
-  integrity sha512-ZuXCT3czrI+Y5ahp50SebkONfC0b2IDhAYHoTujjn/dgfiiLc7a2nJ7JMYuSWSgbyOZRtgeDqklMGZj6hPsLIQ==
+"@kickstartds/core@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@kickstartds/core/-/core-2.0.2.tgz#1e6590b5d449ab34adc9cb9ad700b8f9e52a9d08"
+  integrity sha512-Ek0V/aimTpJDDn05fvK8kGqlNInky9PgnsZTnNPKIvHlM9n/zpB/YShQTsBAqEbUKC8NzOyABIFlO/VjT4wNKQ==
   dependencies:
-    "@babel/runtime" "^7.19.0"
+    "@babel/runtime" "^7.20.1"
     bourbon "^7.2.0"
     classnames "^2.2.6"
     del "^6.0.0"
     dependency-graph "^0.11.0"
-    esbuild "^0.14.42"
+    esbuild "^0.15.10"
     fast-glob "^3.2.11"
     fs-extra "^10.1.0"
     lazysizes "^5.3.2"
     lodash "^4.17.21"
     lodash-es "^4.17.21"
     pubsub-js "^1.9.4"
-    sass "^1.52.1"
+    sass "^1.56.0"
 
 "@kickstartds/json-schema-viewer@^1.1.0":
   version "1.1.0"
@@ -5844,7 +5838,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6, classnames@^2.3.1:
+classnames@^2.2.6, classnames@^2.3.1, classnames@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
@@ -10293,10 +10287,10 @@ junk@^3.1.0:
   resolved "https://registry.npmjs.org/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-kickstartds@1.0.0-beta.7:
-  version "1.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/kickstartds/-/kickstartds-1.0.0-beta.7.tgz#bcc369de69fb3304f98e9d70a3084661c437d4f9"
-  integrity sha512-trMCaUTUypL3BEBugAqgBMvO1pi83+yJpIbMTnYZXoxTqtU/n86x82vRs5WAHO+JHDyt+ldMqmIZlcZotaNNFg==
+kickstartds@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/kickstartds/-/kickstartds-1.0.0.tgz#f5178c7a0df437c88a955fb5bc5e8a01341be2e4"
+  integrity sha512-+Yg5Mt5ElEbhq6kUy8KesTu1g1Y0fRKgGbkh8GnXkhKnqpY0b5t73ogeyZdsd9WCev/SsuoP43+IXGs4Yj/SfQ==
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.9"
     "@babel/preset-react" "^7.17.12"
@@ -13322,6 +13316,11 @@ regenerate@^1.4.2:
   resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
+regenerator-runtime@^0.13.10:
+  version "0.13.11"
+  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
 regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.10"
   resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
@@ -13793,6 +13792,15 @@ sass@^1.52.1, sass@^1.55.0:
   version "1.55.0"
   resolved "https://registry.npmjs.org/sass/-/sass-1.55.0.tgz#0c4d3c293cfe8f8a2e8d3b666e1cf1bff8065d1c"
   integrity sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
+sass@^1.56.0:
+  version "1.56.1"
+  resolved "https://registry.npmjs.org/sass/-/sass-1.56.1.tgz#94d3910cd468fd075fa87f5bb17437a0b617d8a7"
+  integrity sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
