@@ -14488,10 +14488,10 @@ storybook-addon-playroom@^3.0.2:
     react-dom "^16.8.0 || ^17.0.0 || ^18.0.0"
     react-element-to-jsx-string "^15.0.0"
 
-storybook-design-token@^2.7.1:
-  version "2.7.1"
-  resolved "https://registry.npmjs.org/storybook-design-token/-/storybook-design-token-2.7.1.tgz#9d360902ee9b7e6d0ed6e810272ea37152bc2483"
-  integrity sha512-HU4dAa5NQ6jmrX0BJ9tPTznr5DRirqw2FiX80FKovs4pbx8RGCVrF2J+V9SU4VuDrTjYhiDyCtIhP8VHFYdYkg==
+storybook-design-token@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.npmjs.org/storybook-design-token/-/storybook-design-token-2.8.0.tgz#dc638d2d5ef25684348e534b035ac91ba8a4f2c0"
+  integrity sha512-ouOqjPnKgosxDbzQIyBHJu7VPTvC9loqlspqfEDA3GFGZQFhf+TQUEO1hEKJiIwLhMOxVBOBTpCRcv77lFVHNg==
   dependencies:
     "@storybook/addons" "^6.3.12"
     "@storybook/components" "^6.3.12"
