@@ -3,7 +3,7 @@ import { ContentBox } from "@kickstartds/base/lib/content-box";
 import { Section } from "@kickstartds/base/lib/section";
 
 export default {
-  title: "Demo",
+  title: "Pages/Demo",
 };
 
 const Page = () => (

@@ -1,45 +1,37 @@
 export default [
   {
     group: "Button",
-    name: "More Icon",
-    code: `
-      <Button
-        href="#"
-        icon="chevron-right"
-        label="More info"
-      />
-    `,
-  },
-  {
-    group: "Button",
-    name: "Delete Icon",
-    code: `
-      Button
-        href="#"
-        icon="close"
-        label="Delete"
-      />
-    `,
-  },
-  {
-    group: "Button",
-    name: "No Icon",
+    name: "Default",
     code: `
       <Button
         href="#"
         label="Select"
-        icon={false}
       />
     `,
   },
   {
-    group: "Content Box",
+    group: "Teaser Card",
     name: "Default",
     code: `
-      <ContentBox
-        topic="Lorem ipsum..."
-        text="... dolor sit"
+      <TeaserCard
         image="https://picsum.photos/seed/kdscontentbox/500/300"
+        headline="Lorem ipsum..."
+        text="... dolor sit"
+        target="https://www.kickstartDS.com/"
+        inverted="false"
+      />
+    `,
+  },
+  {
+    group: "Teaser Card",
+    name: "Inverted",
+    code: `
+      <TeaserCard
+        image="https://picsum.photos/seed/kdscontentbox/500/300"
+        headline="Lorem ipsum..."
+        text="... dolor sit"
+        target="https://www.kickstartDS.com/"
+        inverted="true"
       />
     `,
   },
@@ -48,23 +40,29 @@ export default [
     name: "Default",
     code: `
       <Section mode="tile">
-        <ContentBox
-          topic="Lorem ipsum..."
-          text="... dolor sit"
+        <TeaserCard
           image="https://picsum.photos/seed/kdscontentbox/500/300"
+          headline="Lorem ipsum..."
+          text="... dolor sit"
+          target="https://www.kickstartDS.com/"
+          inverted="false"
         />
-        <ContentBox
-          topic="Lorem ipsum..."
-          text="... dolor sit"
+        <TeaserCard
           image="https://picsum.photos/seed/kdscontentbox/500/300"
+          headline="Lorem ipsum..."
+          text="... dolor sit"
+          target="https://www.kickstartDS.com/"
+          inverted="false"
         />
-        <ContentBox
-          topic="Lorem ipsum..."
-          text="... dolor sit"
+        <TeaserCard
           image="https://picsum.photos/seed/kdscontentbox/500/300"
+          headline="Lorem ipsum..."
+          text="... dolor sit"
+          target="https://www.kickstartDS.com/"
+          inverted="false"
         />
       </Section>
     `,
   },
- 
+
 ];

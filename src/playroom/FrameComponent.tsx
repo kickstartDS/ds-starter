@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect } from "react";
-import Providers from "../Providers";
+import Providers from "../components/Providers";
 
 import "@kickstartds/base/lib/global/base.js";
 import "@kickstartds/base/lib/global/base.css";

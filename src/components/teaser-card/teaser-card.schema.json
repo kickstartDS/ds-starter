@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.mydesignsystem.com/teaser-card.schema.json",
+  "title": "Teaser Card",
+  "description": "Component used to tease content",
+  "type": "object",
+  "properties": {
+    "headline": {
+      "type": "string",
+      "title": "Headline",
+      "description": "Headline for the teaser card",
+      "format": "markdown"
+    },
+    "text": {
+      "type": "string",
+      "title": "Text",
+      "description": "Body text for the teaser card",
+      "format": "markdown"
+    },
+    "target": {
+      "type": "string",
+      "title": "Target",
+      "description": "Target that should be linked",
+      "format": "uri"
+    },
+    "image": {
+      "type": "string",
+      "title": "Image",
+      "description": "Image to display as cover",
+      "format": "uri"
+    },
+    "inverted": {
+      "type": "boolean",
+      "title": "Invert card?",
+      "description": "Whether to invert the card",
+      "default": false
+    }
+  },
+  "required": ["headline", "text", "target"]
+}

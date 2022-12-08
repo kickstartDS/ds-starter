@@ -1,13 +1,13 @@
 export { Button } from "../components/button/ButtonComponent";
+export { Headline } from "../components/headline/HeadlineComponent";
 export { Section } from "../components/section/SectionComponent";
-export { ContentBox } from "../components/content-box/ContentBoxComponent";
+export { TeaserCard } from "../components/teaser-card/TeaserCardComponent";
 
 export * from "@bedrock-layout/primitives";
 
 export { CollapsibleBox } from "@kickstartds/base/lib/collapsible-box";
 export { Contact } from "@kickstartds/base/lib/contact";
 export { Divider } from "@kickstartds/base/lib/divider";
-export { Headline } from "@kickstartds/base/lib/headline";
 export { Html } from "@kickstartds/base/lib/html";
 export { Icon } from "@kickstartds/base/lib/icon";
 export { IframeRatio } from "@kickstartds/base/lib/iframe";
@@ -19,7 +19,6 @@ export { Table } from "@kickstartds/base/lib/table";
 export { TagLabel } from "@kickstartds/base/lib/tag-label";
 export { TagLabelContainer } from "@kickstartds/base/lib/tag-label-container";
 export { Teaser } from "@kickstartds/base/lib/teaser";
-export { TeaserBox } from "@kickstartds/base/lib/teaser-box";
 export { TeaserRow } from "@kickstartds/base/lib/teaser-row";
 export { TextMedia } from "@kickstartds/base/lib/text-media";
 

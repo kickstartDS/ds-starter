@@ -1,6 +1,6 @@
 import { actions } from "@storybook/addon-actions";
 import { DocsContainer } from "@storybook/addon-docs";
-import { unpackDecorator } from "@kickstartds/core/lib/storybook";
+import { unpackDecorator } from "@kickstartds/core/lib/storybook/helpers";
 
 import "@kickstartds/base/lib/global/base.js";
 import "@kickstartds/base/lib/global/base.css";
@@ -8,7 +8,7 @@ import "../src/index.js";
 import "../static/index.css";
 
 import IconSprite from "../src/token/icons/IconSprite";
-import Providers from "../src/Providers";
+import Providers from "../src/components/Providers";
 import { LinkProvider } from "../src/docs/LinkProvider";
 
 const myActions = actions("radio");
@@ -29,7 +29,18 @@ export const parameters = {
     },
   },
   options: {
-    storySort: { order: ["Docs", ["Welcome"]] },
+    storySort: {
+      order: [
+        "Docs",
+        ["Welcome", "Integration"],
+        "Pages",
+        "Components",
+        "Layout",
+        "Recipes",
+        "Design Tokens",
+      ],
+      method: "alphabetical",
+    },
   },
   designToken: {
     disable: true,

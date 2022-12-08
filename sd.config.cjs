@@ -22,7 +22,7 @@ module.exports = StyleDictionary.extend(config).extend({
     },
     js: {
       transforms: ["attribute/cti", "name/cti/pascal", "size/rem", "color/css"],
-      buildPath: "src/token/",
+      buildPath: "src/token/storybook/",
       files: [
         {
           destination: "tokens.js",
