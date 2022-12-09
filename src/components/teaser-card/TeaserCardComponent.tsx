@@ -24,7 +24,7 @@ export const TeaserCard: FC<
       text={text}
       link={{
         label: "Read more",
-        href: target, 
+        target: target,
       }}
       image={image}
       inverted={inverted}

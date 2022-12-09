@@ -1,10 +1,16 @@
 import classnames from "classnames";
 import { HTMLAttributes, FC, PropsWithChildren } from "react";
 
+import ReactDom from 'react-dom';
+import ReactMarkdown from 'react-markdown';
+
+import { RichText } from "@kickstartds/base/lib/rich-text";
 import { HeadlineContext } from "@kickstartds/base/lib/headline";
 import { defaultRenderFn } from "@kickstartds/core/lib/core";
 
 import { HeadlineProps } from "./HeadlineProps";
+
+const markdownRenderFn = (text) => <ReactMarkdown children={text} components={{p: 'span'}} />;
 
 interface RenderFunctions {
   renderContent?: typeof defaultRenderFn;
@@ -20,12 +26,11 @@ export const Headline: FC<
   level = "h2",
   style = "h2",
   spaceAfter = "small",
-  renderContent = defaultRenderFn,
-  renderSubheadline = defaultRenderFn,
+  renderContent = markdownRenderFn,
+  renderSubheadline = markdownRenderFn,
   ...props
 }) => {
   const TagName = level;
-
   return (
     <>
       {text || sub ? (

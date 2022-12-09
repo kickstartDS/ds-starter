@@ -3,7 +3,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook/helpers";
 import ButtonStories from "@kickstartds/base/lib/button/button.stories";
 import schema from "./button.schema.dereffed.json";
 
-const { defaultArgs: args, argTypes } = getArgsShared(schema);
+const { args, argTypes } = getArgsShared(schema);
 
 const Template = (args) => <Button {...args} />;
 
@@ -19,15 +19,15 @@ export default {
 
 export const NativeButton = Template.bind({});
 NativeButton.args = pack({
-  label: "Click me",
+  label: "Native Button",
   variant: "primary",
 });
 
 export const LinkButton = Template.bind({});
 LinkButton.args = pack({
-  label: "Click me",
+  label: "Link Button",
   variant: "secondary",
-  target: "https://www.kickstartDS.com",
+  target: "#",
 });
 
 export const DisabledButton = Template.bind({});

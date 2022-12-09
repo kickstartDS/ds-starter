@@ -6,7 +6,7 @@ import { BedrockProvider } from "../bedrock/BedrockProvider";
 
 export default (props) => (
   <BedrockProvider>
-   <ButtonProvider>
+    <ButtonProvider>
       <HeadlineProvider>
         <SectionProvider>
           <TeaserBoxProvider {...props} />

@@ -28,7 +28,7 @@ const Template = (args) => {
   )
 };
 
-const { defaultArgs: args, argTypes } = getArgsShared(schema);
+const { args, argTypes } = getArgsShared(schema);
 
 export default {
   ...sectionStories,
@@ -42,21 +42,24 @@ export default {
 
 export const TeaserCards = Template.bind({});
 TeaserCards.args = pack({
+  headline: 'Section headline',
   mode: "tile",
+  ctas: [],
 });
 
 export const WithCtas = Template.bind({});
 WithCtas.args = pack({
+  headline: 'Section headline',
   mode: "tile",
   ctas: [{
-      label: 'Button 01',
-      target: 'https://www.kickstartDS.com',
+      label: 'Section CTA 1',
+      target: '#',
     }, {
-      label: 'Button 02',
-      target: 'https://www.kickstartDS.com',
+      label: 'Section CTA 2',
+      target: '#',
     }, {
-      label: 'Button 03',
-      target: 'https://www.kickstartDS.com',
+      label: 'Section CTA 3',
+      target: '#',
     }
   ]
 });

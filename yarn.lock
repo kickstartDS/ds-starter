@@ -2597,10 +2597,10 @@
   resolved "https://registry.npmjs.org/@kickstartds/storybook-addon-component-tokens/-/storybook-addon-component-tokens-0.1.6.tgz#612864503743cf684ca30429d3f55a0f7710dd97"
   integrity sha512-pqk4aX7aPK0a62WQGB3ukpNYrhTyXBM4fSShtd/bOuJPJLQV80Q+goAo7p0hfwklSKZlOgAoAdTuhsDqhfygiQ==
 
-"@kickstartds/storybook-addon-jsonschema@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/@kickstartds/storybook-addon-jsonschema/-/storybook-addon-jsonschema-1.0.5.tgz#643578e9c74f0f165f64f61a6abe47199c86eb8e"
-  integrity sha512-jS272MUJHTeaSNPKixiHzR/lFyk7IN8bFoZxaodjVOXx+QhPpDLeTUO7fmtgKEGr3urk56+SpZBJLpP4JupxIw==
+"@kickstartds/storybook-addon-jsonschema@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/@kickstartds/storybook-addon-jsonschema/-/storybook-addon-jsonschema-1.0.6.tgz#40718d7369742b5df6876b6968400d0108a75e2d"
+  integrity sha512-oHlaFY62/0eQIS8WLgO4Wv7p3GusK6BX3igSCX2iMcYPjfRgJs2JjohdJ1qlpsAZO6YbG7jIFcjEJZQZalsQwQ==
   dependencies:
     "@kickstartds/json-schema-viewer" "^1.1.0"
     "@monaco-editor/react" "^4.3.1"
@@ -13988,6 +13988,27 @@ react-markdown@^8.0.3:
   version "8.0.3"
   resolved "https://registry.npmjs.org/react-markdown/-/react-markdown-8.0.3.tgz#e8aba0d2f5a1b2124d476ee1fff9448a2f57e4b3"
   integrity sha512-We36SfqaKoVNpN1QqsZwWSv/OZt5J15LNgTLWynwAN5b265hrQrsjMtlRNwUvS+YyR3yDM8HpTNc4pK9H/Gc0A==
+  dependencies:
+    "@types/hast" "^2.0.0"
+    "@types/prop-types" "^15.0.0"
+    "@types/unist" "^2.0.0"
+    comma-separated-tokens "^2.0.0"
+    hast-util-whitespace "^2.0.0"
+    prop-types "^15.0.0"
+    property-information "^6.0.0"
+    react-is "^18.0.0"
+    remark-parse "^10.0.0"
+    remark-rehype "^10.0.0"
+    space-separated-tokens "^2.0.0"
+    style-to-object "^0.3.0"
+    unified "^10.0.0"
+    unist-util-visit "^4.0.0"
+    vfile "^5.0.0"
+
+react-markdown@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.npmjs.org/react-markdown/-/react-markdown-8.0.4.tgz#b5ff1f0f29ead71a7a6f98815eb1a70bcc2a036e"
+  integrity sha512-2oxHa6oDxc1apg/Gnc1Goh06t3B617xeywqI/92wmDV9FELI6ayRkwge7w7DoEqM0gRpZGTNU6xQG+YpJISnVg==
   dependencies:
     "@types/hast" "^2.0.0"
     "@types/prop-types" "^15.0.0"

@@ -3,7 +3,7 @@ import { pack, getArgsShared } from "@kickstartds/core/lib/storybook/helpers";
 import HeadlineStories from "@kickstartds/base/lib/headline/headline.stories";
 import schema from "./headline.schema.dereffed.json";
 
-const { defaultArgs: args, argTypes } = getArgsShared(schema);
+const { args, argTypes } = getArgsShared(schema);
 
 const Template = (args) => <Headline {...args} />;
 
@@ -60,6 +60,6 @@ SubheadlineOrderSwapped.args = pack({
 
 export const Markdown = Template.bind({});
 Markdown.args = pack({
-  text: "With **Markdown** use",
-  sub: "This is a subheadline, displayed below the headline",
+  text: "With *Markdown* use",
+  sub: "This is a subheadline, displayed **below the headline**",
 });

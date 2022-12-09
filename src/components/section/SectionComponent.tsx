@@ -28,7 +28,8 @@ export const Section: FC<
         {...props}
         background={style}
         headline={{
-          content: headline
+          text: headline,
+          content: !!headline,
         }}
         width={width}
         gutter={gutter}
@@ -40,15 +41,27 @@ export const Section: FC<
       {ctas && ctas.length > 0 && (
         <SectionContextDefault
           background={style}
-          width="narrow"
+          width="default"
           gutter={gutter}
           mode="default"
-          spaceBefore="default"
+          spaceBefore="small"
           spaceAfter={spaceAfter}
           inverted={inverted}
         >
-          {ctas.map((cta, index) => (
-            <Button label={cta.label} variant={index === 0 ? "primary" : index === 1 ? "secondary": "tertiary" } size="medium" />
+          {ctas.filter((cta) => cta.label && cta.target).map((cta, index) => (
+            <Button
+              key={index}
+              label={cta.label}
+              target={cta.target}
+              variant={
+                index === 0
+                  ? "primary"
+                  : index === 1
+                    ? "secondary"
+                    : "tertiary"
+              }
+              size="small"
+            />
           ))}
         </SectionContextDefault>
       )}

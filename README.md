@@ -13,8 +13,6 @@
 
 ![Screenshot of the kickstartDS CLI](assets/screenshot-ds.png)
 
-TODO Update screenshot with Recipes added again
-
 ## About
 
 The **kickstartDS Starter** is your most efficient way of kickstarting a **Design System**. It creates a ready-to-use **Design System**, only waiting for you to put your stamp on it! Next to some additional features and configuration, the content of this **Starter** is strongly aligned with our main guide ["Create your **Design System**"](https://www.kickstartds.com/docs/guides/create/). This means you can use that guide as a detailed reference for the way stuff works, and learn about the reasoning behind those decisions.
@@ -70,7 +68,7 @@ The following is a list of included features, that are pre-configured for immedi
 - [**Branding Token**](https://www.kickstartds.com/docs/foundations/token/branding-token) file for quick application of CI / CD
 - Three exemplary components (`Button`, `Headline` and `TeaserCard`) and a layout element (`Section`)
 - Full page demo, recipe demo and rudimentary demo docs
-- [**Storybook**](https://storybook.js.org/) with best-practice configuration, **kickstartDS** integration, and addons
+- [**Storybook**](https://storybook.js.org/) with best-practice configuration, **kickstartDS** integration, addons and composition
 - [**Playroom**](https://github.com/seek-oss/playroom) integration for prototyping
 - Bundling of **Design System** for use with *and* without [**React**](https://reactjs.org/)
 - Automatic, semantic release handling using [**auto**](https://intuit.github.io/auto/)
@@ -168,7 +166,7 @@ There are two concepts involved with design and token application in **kickstart
 
 **Branding Token** are set in `src/token/branding-token.json`, while your **Design Token** set lives at `src/token/dictionary`. Initialization of token happens through `yarn init-tokens`, while compiling your **Design Token** set to **Component Token** (among other formats) is done by running `yarn build-tokens`.
 
-[**Component Token**](https://www.kickstartds.com/docs/foundations/token/component-token) are the third type of token involved, but those only come into play later. They are not involved with the general styling / theming of your **Design System**, but rather map your **Design Token** to components in a layered way..
+[**Component Token**](https://www.kickstartds.com/docs/foundations/token/component-token) are the third type of token involved, but those only come into play later. They are not involved with the general styling / theming of your **Design System**, but rather map your **Design Token** to components in a layered way.
 
 To learn more about this process, follow the section ["2. Design Application"](https://www.kickstartds.com/docs/guides/create/design) of our ["Create your Design System"](https://www.kickstartds.com/docs/guides/create) guide.
 
@@ -186,7 +184,7 @@ If unsure on what components you actually need, or which ones to tackle first, y
 
 ### Dig into our docs
 
-We have added a lot of links to specific docs sections in all the other paragraphs, already. But they deserve a special mention here. Creating a Design System can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommondations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
+We have added a lot of links to specific docs sections in all the other paragraphs, already. But they deserve a special mention here. Creating a **Design System** can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommondations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
 
 Some quick links to get you started:
 
@@ -235,7 +233,8 @@ Some aspects of our integration with **Storybook** were already described by the
 | **Component Token** | Another [**Storybook**](https://www.kickstartds.com/docs/integration/storybook/token#component-token-integration) addon we made. Visualizes your layered **Component Token**, and enables changing values interactively. Changed values get stored in [session storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage?retiredLocale=de), allowing you to test them throughout your whole **Design System** |
 | **Generated Controls** | Your [component API](https://www.kickstartds.com/docs/foundations/components/component-api) (**JSON Schema** files defining your components structure) get converted to [**Storybook Controls**](https://storybook.js.org/docs/react/essentials/controls) automatically. Learn more about this zero-config setup in our dedicated [integrations page about it](https://www.kickstartds.com/docs/integration/storybook/controls) |
 | **Premade Stories** | Especially when [adapting components closely]([adapting components](https://www.kickstartds.com/docs/guides/components/adapt)), you can benefit [from our **Storybook** exports](https://www.kickstartds.com/docs/integration/storybook/stories). We take great care to export everything (parameters, variants, general setup) for you to re-use while writing your own [Stories](https://storybook.js.org/docs/react/get-started/whats-a-story) |
-| **Theming** | Finally some light theming gets applied to your **Storybook** instance, based on your **Design Token** set. It should be subdued, but making **Storybook** your own really helps in establishing a sense of ownership!
+| **Theming** | Finally some light theming gets applied to your **Storybook** instance, based on your **Design Token** set. It should be subdued, but making **Storybook** your own really helps in establishing a sense of ownership! |
+| **Composition** | As part of the left sidebar you have a section titled `@kickstartds/base`. This gets shown because `@kickstartds/base` is a dependency. **kickstartDS** uses [Storybook composition](https://storybook.js.org/docs/react/sharing/storybook-composition) to always include the base documentation (in the correct version used by your Design System) to your **Storybook**. |
 
 **Design Token** get compiled using the [**kickstartDS CLI**](https://www.kickstartds.com/docs/intro/cli) as [part of your `package.json`](https://github.com/kickstartDS/ds-starter/blob/main/package.json#L22). This converts your **Style Dictionary** from `src/token/dictionary` into all the formats configured in [`sd.config.js`](https://github.com/kickstartDS/ds-starter/blob/main/sd.config.cjs). **Storybook** is [configured to import](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/manager-head.html#L1) our special, annotated `src/token/storybook/tokens.css` (this one includes presenters for **storybook-design-token**) through the [import of the compiled `manager.css`](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/manager.scss#L1).
 
@@ -256,7 +255,7 @@ You can see some examples on how this can be applied in [our docs about it](http
 
 This also easily enables more advanced integrations for your components to offer, later on. For example, when [integrating with a headless CMS like **Sanity**](https://www.kickstartds.com/docs/integration/react/rich-text-rendering#sanity), and using existing [**Render Props**](https://reactjs.org/docs/render-props.html) to turn our default **Markdown** capable `RichText` component to one specific to [**Sanity**](https://www.sanity.io/), [using `PortableText`](https://github.com/portabletext/portabletext).
 
-For this starter this means having a file [`src/Providers.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/Providers.jsx) in place, that includes all the needed `Provider`s to replace all the base components by their customized versions throughout your whole **Design System**. As we've added our own versions of the `Button`, `TeaserBox` and `Section` components in this starter, those are imported and added. You can read more about this `Provider` setup in [one of our guides here](https://www.kickstartds.com/docs/guides/create/components#add-component-providers).
+For this starter this means having a file [`src/Providers.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/Providers.jsx) in place, that includes all the needed `Provider`s to replace the base components by their customized versions throughout your whole **Design System**. As we've added our own versions of the `Button`, `TeaserBox` and `Section` components in this starter, those are imported and added. You can read more about this `Provider` setup in [one of our guides here](https://www.kickstartds.com/docs/guides/create/components#add-component-providers).
 
 `Provider`s need to be set [for **Storybook**](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L11), both [for previews](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L55-L64) and the [`Docs` container](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L38-L45) to render components properly. This, too, is covered by our [main guide here](https://www.kickstartds.com/docs/guides/create/components#update-storybookpreviewjs).
 
@@ -274,8 +273,6 @@ The `Section` component is especially well suited for marketing and landing page
     <img src="assets/logo-bedrock.png?raw=true" alt="kickstartDS" width="350" />
   </picture>
 </p>
-
-TODO add explicitly inverted logo version for dark mode
 
 When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter](https://github.com/kickstartDS/ds-starter/blob/main/src/bedrock/). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock)
 
@@ -355,13 +352,14 @@ As described in the very intro to this **README**, all the included components s
 
 ### Recipes
 
-TODO add recipe
+We added one recipe to give you an idea on how you could use those. We've added an [`ArticleTeaser`](https://github.com/kickstartDS/ds-starter/blob/main/src/recipes/article/ArticleTeaser.story.jsx) recipe, as one entry in the more general [`Article`](https://github.com/kickstartDS/ds-starter/blob/main/src/recipes/article/) recipe category.
 
+Recipes are useful to show how your existing components can be re-used, re-mixed and re-applied to new use cases, avoiding the creation of many specialized components. They serve as great inspiration for consumers of your **Design System**, while also slightly nudging in a certain direction by the examples you decide to showcase!
 ### Pages
 
 There is one **Page** currently included with this starter in [`src/pages/Demo.story.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/pages/Demo.story.jsx), added to **Storybook** by [`src/pages/Pages.stories.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/pages/Pages.stories.jsx).
 
-TODO add screenshot of page
+<p align="center"><img src="assets/screenshot-page.png?raw=true" alt="Multi theme Playroom" title="Multi theme Playroom" width=700 /></p>
 
 ### Docs
 

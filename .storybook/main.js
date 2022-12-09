@@ -18,7 +18,7 @@ module.exports = {
     "storybook-addon-playroom",
     "@kickstartds/storybook-addon-component-tokens",
     "@storybook/addon-a11y",
-    // "@kickstartds/storybook-addon-jsonschema",
+    "@kickstartds/storybook-addon-jsonschema",
   ],
   framework: "@storybook/react",
   staticDirs: ["../static"],
@@ -50,17 +50,6 @@ module.exports = {
       ],
       include: path.resolve(__dirname, "../src"),
     });
-
-    // config.module.rules.push({
-    //   test: /\.js$/,
-    //   include: [ /node_modules\/@kickstartds\/core\/lib\/storybook\//],
-    //   use: [
-    //     {
-    //       loader: 'babel-loader',
-    //       options:{"presets":[["@babel/preset-env",{"modules":"commonjs"}]]}
-    //     }
-    //   ]
-    // });
 
     config.resolve.mainFields = ["browser", "module", "main"];
 
