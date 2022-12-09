@@ -13,7 +13,7 @@
 
 ![Screenshot of the kickstartDS CLI](assets/screenshot-ds.png)
 
-TODO Update screenshot with included button on welcome page
+TODO Update screenshot with Recipes added again
 
 ## About
 
@@ -55,8 +55,6 @@ Skip ahead to:
   - [Contributing](#contributing)
   - [License](#license)
 
-TODO skip this in docs
-
 ## Overview
 
 This repository can serve as the starting point for **your own Design System**. It only includes minimal, but illustrative, example components and integrations. The selected components should be useful in every **Design System** by themselves, but they're specifically used to showcase features and best practices at play in **kickstartDS**, and to make it easier for you to just add stuff to an already working, well-oiled system.
@@ -78,7 +76,7 @@ The following is a list of included features, that are pre-configured for immedi
 - Automatic, semantic release handling using [**auto**](https://intuit.github.io/auto/)
 - CI / CD integration for [**Circle CI**](https://circleci.com/)
 
-See the dedicated section about [the main features TODO add link](#) below for more detailed descriptions, alternatively jump ahead to one of the following sections:
+See the dedicated section about [the main features](#features) below for more detailed descriptions.
 
 ## Installation
 
@@ -200,7 +198,7 @@ Some quick links to get you started:
 | https://www.kickstartds.com/docs/integration/ | Info about the ways **kickstartDS** integrates with other tooling and systems |
 | https://www.kickstartds.com/docs/guides/ | Focussed guides, categorized into the main areas of a **Design System**|
 | https://www.kickstartds.com/docs/guides/create/ | Main guide, also a great reference for the reasoning behind this starter|
-| https://www.kickstartds.com/docs/feedback/ | All the ways you can provide feedback to us, which we always enjoy a lot!
+| https://www.kickstartds.com/docs/feedback/ | All the ways you can provide feedback to us, which we value a lot!|
 
 ## Features
 
@@ -208,7 +206,7 @@ This starter is already quite rich in features that are enabled out-of-the-box f
 
 ### **Design Token** integration
 
-One important part of a **Design System** is having a well structured and semantic token system in place. Learn about customizing your **Design Token** set in [our dedicated section above TODO add link](#), helping you to adapt your own branding / CI / CD.
+One important part of a **Design System** is having a well structured and semantic token system in place. Learn about customizing your **Design Token** set in [our dedicated section above](#design-token-integration), helping you to adapt your own branding / CI / CD.
 
 **Design Token** can be initialized by changing the values in `src/token/branding-token.json` and calling `yarn init-tokens`, and compiled to **CSS Custom Properties** by running `yarn build-tokens`. While `yarn init-tokens` generates your **Design Token** set in `src/token/dictionary`, `yarn build-tokens` reads them from there, and outputs the resulting formats (which **CSS Custom Properties** is just one of) according to your **Style Dictionary** config.
 
@@ -250,8 +248,6 @@ All the other integrations don't live at **one** central place, but instead requ
 - **Generated Controls** are enabled by importing the [helpers `getArgsShared` and `pack`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L3), and [using](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L8) [them](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L10) [throughout](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L15-L16) [the](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L24) **Story**. This takes care of generating all the **Storybook Controls** automatically for you, based off our [component APIs](https://www.kickstartds.com/docs/foundations/components/component-api) (the **JSON Schema** definitions).
 - **Premade stories** work by [importing the base **Story**](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L4) first, and [then destructuring them](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L13) into the default export... before setting your [own options as overrides](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L14C22-L20).
 
-TODO do this with Scrollycoding in docs
-
 ### **React** integration
 
 There are some **React** concepts already in use deep in **kickstartDS**, and its base components you build upon. This includes using [**Render Props**](https://reactjs.org/docs/render-props.html), and adding [**Context** / **Provider**](https://reactjs.org/docs/context.html) to all components, both to enable flexible and efficient mix-and-match of components.
@@ -272,23 +268,33 @@ For the most common use cases we include the [`Section` component](https://www.k
 
 The `Section` component is especially well suited for marketing and landing pages. It provdides general layout options ("horizontal slices" on a page) for components to be put in. You can see all available options here: [**Storybook** Docs for `Section`](https://www.kickstartds.com/storybook/?path=/docs/base-section--content-boxes).
 
-When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter TODO add Link](#). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock)
+<p align="center">
+  <picture>
+    <source style="filter: invert(90%)" media="(prefers-color-scheme: dark)" srcset="https://www.kickstartds.com/docs/img/logo-light.svg">
+    <img src="assets/logo-bedrock.png?raw=true" alt="kickstartDS" width="350" />
+  </picture>
+</p>
+
+TODO test if this works
+
+When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter](https://github.com/kickstartDS/ds-starter/blob/main/src/bedrock/). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock)
 
 To learn more about **Bedrock Layout Primitves** and why, when and how to use it with **kickstartDS**, and when **Container Queries** might actually be preferrable, you can also read our second release spotlight: [Release Spotlight: Container Queries](https://www.kickstartds.com/blog/release-spotlight-container-queries/).
-
-TODO add integration to starter!
 
 ### **Playroom** integration
 
 We're big proponents of prototyping interface as close to your real **Design System** as possible. For developers, and even code-affine designers, we really love the DX [**Playroom**](https://github.com/seek-oss/playroom) by [seek-oss](https://github.com/seek-oss) offers for this.
 
-TODO add gif of usage
+<p align="center"><img src="assets/playroom-demo.gif?raw=true" alt="Playroom Demo" title="Playroom Demo" /><br>
+&mdash; image by https://github.com/seek-oss/playroom</p>
 
 This is why we've included a **Playroom** integration with this starter (and because it's actually really easy to do with the way **kickstartDS** is set up) at [`playroom.config.js`](https://github.com/kickstartDS/ds-starter/blob/main/playroom.config.js).
 
 There's some configuration in **Storybook**s [`.storybook/preview.js`](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L47-L52C5), and all components that should be enabled need to be added in [`src/playroom/components.ts`](https://github.com/kickstartDS/ds-starter/blob/main/src/playroom/components.ts). We also added [**Bedrock Layout Primitives**](#bedrock-layout-primitives-integration) support out-of-the-box, there.
 
 To change the included [**Snippets**](https://github.com/seek-oss/playroom#snippets) edit [`src/playroom/snippets.ts`](https://github.com/kickstartDS/ds-starter/blob/main/src/playroom/snippets.ts), and to change the [theme integration](https://github.com/seek-oss/playroom#theme-support) (or even to add multiple themes / white-label testing capabilities to it) have a look at [`src/playroom/FrameComponent.tsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/playroom/FrameComponent.tsx) and the folder [`src/playroom/themes`](https://github.com/kickstartDS/ds-starter/tree/main/src/playroom/themes).
+
+<p align="center"><img src="assets/screenshot-multitheme.png?raw=true" alt="Multi theme Playroom" title="Multi theme Playroom" width=800 /></p>
 
 Finally, [**TypeScript** support](https://github.com/seek-oss/playroom#typescript-support) for all your (and our **kickstartDS** base) components is also already configured. This enables auto-complete for all components, making it really easy and playful to discover components and their properties!
 
@@ -299,8 +305,6 @@ yarn playroom
 ```
 
 > :information_source: **Combined use with Storybook**: You can even [use **Playroom** in your **Storybook**](https://github.com/seek-oss/playroom#storybook-integration) as an addon, just be sure start **Playroom** before starting **Storybook**. Because you guessed it: it's already set up!
-
-TODO add image of multi-theme WLP
 
 ### Bundling
 
@@ -367,39 +371,37 @@ There are two docs pages (the [**Welcome** page](https://github.com/kickstartDS/
 
 Short descriptions for all of the scripts entries in `package.json`:
 
-|Script|Description|
-|-|-|
-|`build-storybook`| Compile **Design Token** set first, run `sass`, `sass-manager` and `schema` in parallel, before finally starting the default `build-storybook` script |
-|`build-tokens`| Compile **Design Token** set according to `sd.config.cjs` |
-|`chromatic`| Run **Visual Regression Tests** with **Chromatic** |
-|`dist:components`| Build all the components for **React** usage |
-|`dist:fonts`| Copy `static/fonts` to `dist/` |
-|`dist:iconsprite`| Copy `IconSprite.js` to `dist/` |
-|`dist:images`| Copy `static/img` and `static/logo.svg` to `dist/` |
-|`dist:favicons`| copy `static/favicon` to `dist/` |
-|`dist:sass`| Build **CSS** using **Dart Sass** |
-|`dist:schema`| Process **JSON Schema** files, copy result to `dist/` and run `tsc` to generate **TypeScript** types |
-|`dist:js`| Build component **JavaScript** using **esbuild** |
-|`init-tokens`| Initialize **Design Token** set using `src/token/branding-token.json` |
-|`playroom`| Start all watch tasks before starting **Playroom** |
-|`playroom:start`| Starts **Playroom** in watch mode |
-|`playroom:build`| Builds **Playroom** for deployment |
-|`prepublishOnly`| Runs before publishing a release, resets `dist/`, compiles your **Design Token** set and then runs all `dist:*` scripts in parallel |
-|`sass`| Compile **CSS** for use in **Storybook** (when not bundled for distribution) |
-|`sass-manager`| Compile **CSS** for **Storybook**s manager, enables the light theming capabilities added |
-|`schema`| Run all the `schema:*` entries in parallel |
-|`schema:dereference-schemas`| Dereference **JSON Schema**, to inline all references (`$ref`) to make consumption (e.g. in **Storybook Controls**) easier |
-|`schema:generate-props`| Generate **TypeScript** types based on your component API |
-|`start`| Start everything in watch mode, and then start **Storybook** in watch mode, too |
-|`storybook`| Alias for default **Storybook** start script `start-storybook` |
-|`token`| Extracts **Component Token** from component **CSS** / **SCSS**, so they can be displayed in our addon |
-|`watch:sass`| Compile **CSS** for use in **Storybook** in watch mode |
-|`watch:sass-manager`| Compile **CSS** for **Storybook**s manager in watch mode |
-|`watch:schema`| Run all the schema scripts in parallel, when a **JSON Schema** changes |
-|`watch:token`| Compile **Design Token** set and extract **Component Token** when a tokens **CSS** / **SCSS** file changes |
-|`watch:dictionary`| Compile **Design Token** set when a **Style Dictionary** file changes |
-
-TODO add links
+|Script|Link|Description|
+|-|-|-|
+|`build-storybook`| [Features > **Storybook** integration](#storybook-integration) | Compile **Design Token** set first, run `sass`, `sass-manager` and `schema` in parallel, before finally starting the default `build-storybook` script |
+|`build-tokens`| [Features > **Design Token** integration](#design-token-integration)| Compile **Design Token** set according to `sd.config.cjs` |
+|`chromatic`| [Features > Release handling](#release-handling) | Run **Visual Regression Tests** with **Chromatic** |
+|`dist:components`| [Features > Bundling > Bundling for **React** usage](#bundling-for-react-usage) | Build all the components for **React** usage |
+|`dist:fonts`| [Features > Bundling](#bundling) | Copy `static/fonts` to `dist/` |
+|`dist:iconsprite`| [Features > Bundling > Bundling for **React** usage](#bundling-for-react-usage) | Copy `IconSprite.js` to `dist/` |
+|`dist:images`|[Features > Bundling](#bundling) | Copy `static/img` and `static/logo.svg` to `dist/` |
+|`dist:favicons`|[Features > Bundling](#bundling) | copy `static/favicon` to `dist/` |
+|`dist:sass`|[Features > Bundling > Bundling for **HTML** usage](#bundling-for-html-usage) | Build **CSS** using **Dart Sass** |
+|`dist:schema`|[Features > Bundling](#bundling) | Process **JSON Schema** files, copy result to `dist/` and run `tsc` to generate **TypeScript** types |
+|`dist:js`|[Features > Bundling](#bundling) | Build component **JavaScript** using **esbuild** |
+|`init-tokens`| [Next steps > Customizing **Design Token**](#customizing-design-token) | Initialize **Design Token** set using `src/token/branding-token.json` |
+|`playroom`|[Features > **Playroom** integration](#playroom-integration) |Start all watch tasks before starting **Playroom** |
+|`playroom:start`|[Features > **Playroom** integration](#playroom-integration) | Starts **Playroom** in watch mode |
+|`playroom:build`|[Features > **Playroom** integration](#playroom-integration) | Builds **Playroom** for deployment |
+|`prepublishOnly`|[Features > Release handling](#release-handling) | Runs before publishing a release, resets `dist/`, compiles your **Design Token** set and then runs all `dist:*` scripts in parallel |
+|`sass`| [Features > **Storybook** integration](#storybook-integration) |Compile **CSS** for use in **Storybook** (when not bundled for distribution) |
+|`sass-manager`| [Features > **Storybook** integration](#storybook-integration) |Compile **CSS** for **Storybook**s manager, enables the light theming capabilities added |
+|`schema`|[Features > **Storybook** integration](#storybook-integration) | Run all the `schema:*` entries in parallel |
+|`schema:dereference-schemas`|[Features > **Storybook** integration](#storybook-integration) | Dereference **JSON Schema**, to inline all references (`$ref`) to make consumption (e.g. in **Storybook Controls**) easier |
+|`schema:generate-props`|[Features > **Storybook** integration](#storybook-integration) | Generate **TypeScript** types based on your component API |
+|`start`|[Getting started (in 5 minutes)](#getting-started-in-5-minutes) | Start everything in watch mode, and then start **Storybook** in watch mode, too |
+|`storybook`|[Getting started (in 5 minutes)](#getting-started-in-5-minutes) | Alias for default **Storybook** start script `start-storybook` |
+|`token`| [Features > **Design Token** integration](#design-token-integration)|Extracts **Component Token** from component **CSS** / **SCSS**, so they can be displayed in our addon |
+|`watch:sass`|[Features > **Storybook** integration](#storybook-integration) | Compile **CSS** for use in **Storybook** in watch mode |
+|`watch:sass-manager`|[Features > **Storybook** integration](#storybook-integration) | Compile **CSS** for **Storybook**s manager in watch mode |
+|`watch:schema`|[Features > **Storybook** integration](#storybook-integration) | Run all the schema scripts in parallel, when a **JSON Schema** changes |
+|`watch:token`|[Features > **Design Token** integration](#design-token-integration)| Compile **Design Token** set and extract **Component Token** when a tokens **CSS** / **SCSS** file changes |
+|`watch:dictionary`|[Features > **Design Token** integration](#design-token-integration)| Compile **Design Token** set when a **Style Dictionary** file changes |
 
 ## Contributing
 
@@ -419,3 +421,37 @@ This project is licensed under either of
 at your option.
 
 The [SPDX](https://spdx.dev) license identifier for this project is `MIT OR Apache-2.0`.
+
+- [kickstartDS Starter](#kickstartds-starter)
+  - [About](#about)
+  - [Overview](#overview)
+    - [Feature list](#feature-list)
+  - [Installation](#installation)
+  - [Getting started (in 5 minutes)](#getting-started-in-5-minutes)
+    - [1. Create from template](#1-create-from-template)
+    - [2. Update `package.json`](#2-update-packagejson)
+    - [3. Add your own logo](#3-add-your-own-logo)
+    - [4. Install dependencies](#4-install-dependencies)
+    - [5. Start **Storybook**](#5-start-storybook)
+  - [Next steps](#next-steps)
+    - [Customizing **Design Token**](#customizing-design-token)
+    - [Adding components](#adding-components)
+    - [Dig into our docs](#dig-into-our-docs)
+  - [Features](#features)
+    - [**Design Token** integration](#design-token-integration)
+    - [**Storybook** integration](#storybook-integration)
+    - [**React** integration](#react-integration)
+    - [**Bedrock Layout Primitives** integration](#bedrock-layout-primitives-integration)
+    - [**Playroom** integration](#playroom-integration)
+    - [Bundling](#bundling)
+      - [Bundling for **HTML** usage](#bundling-for-html-usage)
+      - [Bundling for **React** usage](#bundling-for-react-usage)
+    - [Release handling](#release-handling)
+  - [Content](#content)
+    - [Components](#components)
+    - [Recipes](#recipes)
+    - [Pages](#pages)
+    - [Docs](#docs)
+  - [Scripts](#scripts)
+  - [Contributing](#contributing)
+  - [License](#license)
