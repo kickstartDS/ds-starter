@@ -270,12 +270,12 @@ The `Section` component is especially well suited for marketing and landing page
 
 <p align="center">
   <picture>
-    <source style="filter: invert(90%)" media="(prefers-color-scheme: dark)" srcset="https://www.kickstartds.com/docs/img/logo-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-bedrock-inverted.png">
     <img src="assets/logo-bedrock.png?raw=true" alt="kickstartDS" width="350" />
   </picture>
 </p>
 
-TODO test if this works
+TODO add explicitly inverted logo version for dark mode
 
 When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter](https://github.com/kickstartDS/ds-starter/blob/main/src/bedrock/). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock)
 
