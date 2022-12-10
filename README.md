@@ -57,7 +57,7 @@ Skip ahead to:
 
 This repository can serve as the starting point for **your own Design System**. It only includes minimal, but illustrative, example components and integrations. The selected components should be useful in every **Design System** by themselves, but they're specifically used to showcase features and best practices at play in **kickstartDS**, and to make it easier for you to just add stuff to an already working, well-oiled system.
 
-We have extensive documentation building up most of the code you'll find in this starter from scratch. The respective guide ["Create your Design System"](https://www.kickstartds.com/docs/guides/create/) can thus serve as a great reference while exploring this starter on your own, or when having specific questions about a feature or integration.
+We have extensive documentation building up most of the code you'll find in this starter from scratch. The respective guide ["Create your Design System"](https://www.kickstartds.com/docs/guides/create/) can thus serve as a great reference whilst exploring this starter on your own, or when having specific questions about a feature or integration.
 
 ### Feature list
 
@@ -69,6 +69,7 @@ The following is a list of included features, that are pre-configured for immedi
 - Three exemplary components (`Button`, `Headline` and `TeaserCard`) and a layout element (`Section`)
 - Full page demo, recipe demo and rudimentary demo docs
 - [**Storybook**](https://storybook.js.org/) with best-practice configuration, **kickstartDS** integration, addons and composition
+- **Hot reload** for **all** code changes: **Design Token** set, **JSON Schema**, **CSS** / **SCSS**, **JavaScript** and **React** templates
 - [**Playroom**](https://github.com/seek-oss/playroom) integration for prototyping
 - Bundling of **Design System** for use with *and* without [**React**](https://reactjs.org/)
 - Automatic, semantic release handling using [**auto**](https://intuit.github.io/auto/)
@@ -86,7 +87,7 @@ To learn more generally about the optimal environment to work with **kickstartDS
 
 ## Getting started (in 5 minutes)
 
-Let's get started creating your own **Design System**! We should be done with the basic setup in just 3 easy steps, taking you 5 minutes max!
+Let's get started creating your own **Design System**! We should be done with the basic setup in just 5 easy steps, taking you 5 minutes max!
 
 ### 1. Create from template
 
@@ -103,7 +104,7 @@ As a last step, simply clone your freshly made repository, and switch into its d
 
 ### 2. Update `package.json`
 
-After checkout, you should start by adding some meta info to `package.json`... like `name` for the name of your project (among other things, this will also decide the name your **Design System** will be [published under in **npm**](#bundling)). Other fields you might want to change include: `version`, `description`, `homepage`, `license` and `author`. Have a look at [the **npm** docs for `package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) for all the juicy details.
+After checkout, you should start by adding some meta info to `package.json`... like `name` for the name of your project. Among other things, this will also decide the name your **Design System** will be [published under in **npm**](#bundling). Other fields you might want to change include: `version`, `description`, `homepage`, `license` and `author`. Have a look at [the **npm** docs for `package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) for all the juicy details.
 
 And while at it, you should probably also change the author in the following files:
 
@@ -115,13 +116,13 @@ And while at it, you should probably also change the author in the following fil
 
 ### 3. Add your own logo
 
-Last thing to do before installing and starting everything is to replace the placeholder logo with your own. Just replace `static/logo.svg`, and you should be good to go!
+Last thing to do before installing and starting everything is to replace the placeholder logo with your own one. Just replace `static/logo.svg`, and you should be good to go!
 
-> :information_source: **Other image formats**: If you don't have a `.svg` file for your logo (you really should have one!), you can just put that file into the `static/` folder, and change the reference in `.storybook/themes.js` to point to that file instead.
+> :information_source: **Other image formats**: If you don't have a `.svg` file for your logo (you really should have one!), you can just put that file into the `static/` folder, and change the reference in `.storybook/themes.js` to point to that instead.
 
 ### 4. Install dependencies
 
-Continue by checking your **Node.js** version (or execute `nvm use` if you opted for the **nvm** route) with `node --version`. It should output `16.14` for this starter.
+Continue by checking your **Node.js** version (or execute `nvm use` if you opted for [the **nvm** route](https://www.kickstartds.com/docs/intro/environment#usage-with-nvm)) with `node --version`. It should output `16.14` for this starter.
 
 Follow this with a **yarn** or **npm** install:
 
@@ -133,7 +134,7 @@ yarn install
 npm install
 ```
 
-This should set up all the needed dependencies. It could take a while the first time around, so while that's running... why not take a peek at the features section?
+This should set up all the needed dependencies. It could take a while the first time around, so while that's running... why not take a peek at [the features section](#features)?
 
 > :information_source: We use `yarn` for package management ourselves, including their workspaces feature... <br><br>Just replace commands prefixed with `yarn` by their corresponding `npm` equivalents if using **npm**.
 
@@ -147,17 +148,17 @@ yarn start
 
 **Storybook** should automatically open in your preferred browser, showing you a demo "Welcome" page with some dummy content.
 
-`yarn start` here is actually an alias starting all configured watch tasks in parallel to starting **Storybook** in watch mode. This ensures that whatever file you edit, you should have hot reload while working!
+`yarn start` here is actually an alias starting all configured watch tasks, in parallel to also starting **Storybook** in watch mode. This ensures that whatever file you edit, you should have hot reload while working on your code!
 
 Have a look at the next section for inspiration on what the next steps could look like on the journey to your customized **Design System**.
 
 ## Next steps
 
-Where you take it next is pretty much up to you completely. There are some things one would pretty much always want to do (e.g. Customizing Design Token), while others might be optional. In which order you tackle those shouldn't make a difference, just choose what fancies you the most.
+Where you take it next is pretty much up to you completely. There are some things one would pretty much always want to do (e.g. [Customizing Design Token](#customizing-design-token)), while others might be optional. In which order you tackle those shouldn't make a difference, just choose what fancies you the most!
 
 ### Customizing **Design Token**
 
-When getting started with your **Design System**, you will find the current **Design Token** set to be pretty bland and boring... this is because you are looking at the default, pretty much unstyled variants of components.
+When getting started with your **Design System**, you will find the current **Design Token** set to be pretty bland and boring... this is because you are looking at the default, pretty much unstyled versions of components.
 
 There are two concepts involved with design and token application in **kickstartDS**:
 
@@ -166,7 +167,7 @@ There are two concepts involved with design and token application in **kickstart
 
 **Branding Token** are set in `src/token/branding-token.json`, while your **Design Token** set lives at `src/token/dictionary`. Initialization of token happens through `yarn init-tokens`, while compiling your **Design Token** set to **Component Token** (among other formats) is done by running `yarn build-tokens`.
 
-[**Component Token**](https://www.kickstartds.com/docs/foundations/token/component-token) are the third type of token involved, but those only come into play later. They are not involved with the general styling / theming of your **Design System**, but rather map your **Design Token** to components in a layered way.
+[**Component Token**](https://www.kickstartds.com/docs/foundations/token/component-token) are the third type of token involved, but those only come into play later. They are not concerned with the general styling / theming of your **Design System**, but rather map your **Design Token** set to components in a layered way.
 
 To learn more about this process, follow the section ["2. Design Application"](https://www.kickstartds.com/docs/guides/create/design) of our ["Create your Design System"](https://www.kickstartds.com/docs/guides/create) guide.
 
@@ -174,24 +175,24 @@ To learn more about this process, follow the section ["2. Design Application"](h
 
 As described in the intro to this `README`, the components already included serve as a great example on how to leverage **kickstartDS**. But obviously you will want to add your own components, suited to exactly your needs!
 
-We have to tried to outline this process of component creation, and all its aspects, in our documentation. All the components included with this starter get created in part of ["4. Add Components"](https://www.kickstartds.com/docs/guides/create/components) of our main guide ["Create your Design System"](https://www.kickstartds.com/docs/guides/create). You can use to cross-reference the thought process behind the components already included, and it should give you a good idea on how to approach your own ones.
+We have to tried to outline this process of component creation, and all its aspects, in our documentation. All the components included with this starter get created in part of ["4. Add Components"](https://www.kickstartds.com/docs/guides/create/components) of our main guide ["Create your Design System"](https://www.kickstartds.com/docs/guides/create). You can use that guide to cross-reference the thought process behind the components already included, and it should give you a good idea on how to approach your own ones.
 
 You can have a look at all the component examples in [our guides here](https://www.kickstartds.com/docs/guides/examples/components/), or learn about the involved processes in more detail in the ["Components"](https://www.kickstartds.com/docs/guides/components/) subsection.
 
 Futher, all the aspects making up a component are described as part of the ["Component"](https://www.kickstartds.com/docs/foundations/components/) subsection under ["Foundations"](https://www.kickstartds.com/docs/foundations/).
 
-If unsure on what components you actually need, or which ones to tackle first, you could investigate starting your own [Design System Initiative](https://www.kickstartds.com/docs/guides/design-system-initiative). We also wrote about it [in a blog post](https://www.kickstartds.com/blog/how-our-initiative-workshop-series-helps-customers-to-decide-for-or-against-a-design-system/), and [offer support in executing one](https://www.kickstartds.com/services/), too. If you still feel like you need a helping hand!
+If unsure on what components you actually need, or which ones to tackle first, you could investigate starting your own [Design System Initiative](https://www.kickstartds.com/docs/guides/design-system-initiative). We also wrote about it [in a blog post](https://www.kickstartds.com/blog/how-our-initiative-workshop-series-helps-customers-to-decide-for-or-against-a-design-system/), and [offer support in executing one](https://www.kickstartds.com/services/)... if you still feel like you need a helping hand!
 
 ### Dig into our docs
 
-We have added a lot of links to specific docs sections in all the other paragraphs, already. But they deserve a special mention here. Creating a **Design System** can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommondations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
+We have added a lot of links to specific docs sections in all the other paragraphs already. But they deserve a special mention here. Creating a **Design System** can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, especially when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommondations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
 
 Some quick links to get you started:
 
 | Link | Description |
 | - | - |
 | https://www.kickstartds.com/docs/ | Start page, good intro to the general structure of our docs
-| https://www.kickstartds.com/docs/intro/ | Super general introduction of **kickstartDS**, including YouTube explanation |
+| https://www.kickstartds.com/docs/intro/ | Super general introduction of **kickstartDS**, including **YouTube** explanation |
 | https://www.kickstartds.com/docs/foundations/ | Foundational info about the structure and architecture of **kickstartDS** |
 | https://www.kickstartds.com/docs/integration/ | Info about the ways **kickstartDS** integrates with other tooling and systems |
 | https://www.kickstartds.com/docs/guides/ | Focussed guides, categorized into the main areas of a **Design System**|
@@ -200,13 +201,13 @@ Some quick links to get you started:
 
 ## Features
 
-This starter is already quite rich in features that are enabled out-of-the-box for you. To give you some orientation, while also describing the intention behind features, and ensuring you can actually make the most out of your **Design System**
+This starter is already quite rich in features that are enabled out-of-the-box for you. To give you some orientation, while also describing the intention behind features, and ensuring you can actually make the most out of your **Design System**.
 
 ### **Design Token** integration
 
 One important part of a **Design System** is having a well structured and semantic token system in place. Learn about customizing your **Design Token** set in [our dedicated section above](#design-token-integration), helping you to adapt your own branding / CI / CD.
 
-**Design Token** can be initialized by changing the values in `src/token/branding-token.json` and calling `yarn init-tokens`, and compiled to **CSS Custom Properties** by running `yarn build-tokens`. While `yarn init-tokens` generates your **Design Token** set in `src/token/dictionary`, `yarn build-tokens` reads them from there, and outputs the resulting formats (which **CSS Custom Properties** is just one of) according to your **Style Dictionary** config.
+**Design Token** can be initialized by changing the values in `src/token/branding-token.json` and calling `yarn init-tokens`, and compiled to **CSS Custom Properties** by running `yarn build-tokens`. While `yarn init-tokens` generates your **Design Token** set in `src/token/dictionary`, `yarn build-tokens` reads it from there, and outputs the resulting formats (which **CSS Custom Properties** is just one of) according to your **Style Dictionary** config.
 
 We already include a minimal **Style Dictionary** configuration as part of our [**CLI**](https://www.kickstartds.com/docs/intro/cli), but you can overwrite this configuration by adding a `sd.config.cjs` to your repository root. Explore that file for details on the formats configured in this starter (the path the format output is written to can be influenced by setting `buildPath`):
 
@@ -218,23 +219,31 @@ We already include a minimal **Style Dictionary** configuration as part of our [
 | **storybook** | Writes a selection of files (`icons.svg`, `tokens.css`) to `src/token/storybook`. Those are versions of files already described above, but with automatically added annotations for the **storybook-design-token** addon |
 | **js** | This also creates a file (`src/token/storybook/tokens.js`) only used by **Storybook**, to [add some light theming to your instance](https://www.kickstartds.com/docs/integration/storybook/theming) based on your **Design Token** set. | 
 
-Also included is a set of **Storybook** pages documenting your **Design Token** set, using aforementioned **storybook-design-token**. You can find them in `docs/tokens`, feel free to adjust them to your liking!
+Also included is a set of **Storybook** pages documenting your **Design Token** set, using aforementioned **storybook-design-token** addon. You can find them in `docs/tokens`, feel free to adjust them to your liking!
+
+You can also have a look at our **Figma** token file visualizing exactly that token structure:
+
+<p align="center">
+  <a href="assets/figma-cover.png" target="_blank"><img src="assets/figma-cover.png" width="20%" alt="Figma file cover" title="Figma file cover"></img></a> <a href="assets/figma-colors.png" target="_blank"><img src="assets/figma-colors.png" alt="Figma colors" title="Figma colors" width="20%"></img></a> <a href="assets/figma-spacing.png" target="_blank"><img src="assets/figma-spacing.png" alt="Figma spacing" title="Figma spacing" width="20%"></img></a> <a href="assets/figma-typo.png" target="_blank"><img src="assets/figma-typo.png" alt="Figma typo" title="Figma typo" width="20%"></img></a> 
+  <br>
+  <a href="#" target="_blank">View <strong>Figma</strong> file</a>
+</p>
 
 To learn more about **Design Token** and their support in **kickstartDS** read our first release spotlight: [Release Spotlight: Semantic Token](https://www.kickstartds.com/blog/release-spotlight-semantic-token/).
 
 ### **Storybook** integration
 
-Some aspects of our integration with **Storybook** were already described by the last section about [**Design Token** integration](#design-token-integration). Let us quickly outline all of the integration points:
+Some aspects of our integration with **Storybook** were already covered by the last section about [**Design Token** integration](#design-token-integration). But let's quickly outline **all** of the integration points:
 
 | Integration | Description |
 | - | - |
-| **JSON Schema** | [**Storybook** addon](https://www.kickstartds.com/docs/integration/storybook/schema), also written by us, to display your [component API](https://www.kickstartds.com/docs/foundations/components/component-api) directly alongside your component (includes inline **JSON** editor using [Monaco](https://microsoft.github.io/monaco-editor/), with auto-complete) |
-| **Design Token** | Integration with **storybook-design-token** addon, read more about it on our [integration page about it](https://www.kickstartds.com/docs/integration/storybook/token#design-token-integration). Also included are **Storybook** pages documenting your **Design Token** set... you can find them in `docs/tokens` |
-| **Component Token** | Another [**Storybook**](https://www.kickstartds.com/docs/integration/storybook/token#component-token-integration) addon we made. Visualizes your layered **Component Token**, and enables changing values interactively. Changed values get stored in [session storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage?retiredLocale=de), allowing you to test them throughout your whole **Design System** |
-| **Generated Controls** | Your [component API](https://www.kickstartds.com/docs/foundations/components/component-api) (**JSON Schema** files defining your components structure) get converted to [**Storybook Controls**](https://storybook.js.org/docs/react/essentials/controls) automatically. Learn more about this zero-config setup in our dedicated [integrations page about it](https://www.kickstartds.com/docs/integration/storybook/controls) |
-| **Premade Stories** | Especially when [adapting components closely]([adapting components](https://www.kickstartds.com/docs/guides/components/adapt)), you can benefit [from our **Storybook** exports](https://www.kickstartds.com/docs/integration/storybook/stories). We take great care to export everything (parameters, variants, general setup) for you to re-use while writing your own [Stories](https://storybook.js.org/docs/react/get-started/whats-a-story) |
-| **Theming** | Finally some light theming gets applied to your **Storybook** instance, based on your **Design Token** set. It should be subdued, but making **Storybook** your own really helps in establishing a sense of ownership! |
-| **Composition** | As part of the left sidebar you have a section titled `@kickstartds/base`. This gets shown because `@kickstartds/base` is a dependency. **kickstartDS** uses [Storybook composition](https://storybook.js.org/docs/react/sharing/storybook-composition) to always include the base documentation (in the correct version used by your Design System) to your **Storybook**. |
+| **JSON Schema** | [**Storybook** addon](https://www.kickstartds.com/docs/integration/storybook/schema) written by us, to display your [component API](https://www.kickstartds.com/docs/foundations/components/component-api) directly alongside your component (includes inline **JSON** editor using [Monaco](https://microsoft.github.io/monaco-editor/), with auto-complete). |
+| **Design Token** | Integration with **storybook-design-token** addon, read more about it on our [integration page about it](https://www.kickstartds.com/docs/integration/storybook/token#design-token-integration). Also included are **Storybook** pages documenting your **Design Token** set... you can find them in `docs/tokens`. |
+| **Component Token** | Another [**Storybook**](https://www.kickstartds.com/docs/integration/storybook/token#component-token-integration) addon we made. Visualizes your layered **Component Token**, and enables changing values interactively. Changed values get stored in [session storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage?retiredLocale=de), allowing you to test them throughout your whole **Design System**. |
+| **Generated Controls** | Your [component API](https://www.kickstartds.com/docs/foundations/components/component-api) (**JSON Schema** files defining your components structure) get converted to [**Storybook Controls**](https://storybook.js.org/docs/react/essentials/controls) automatically. Learn more about this zero-config setup in our dedicated [integrations page about it](https://www.kickstartds.com/docs/integration/storybook/controls). |
+| **Premade Stories** | Especially when [adapting components closely](https://www.kickstartds.com/docs/guides/components/adapt), you can benefit [from our **Storybook** exports](https://www.kickstartds.com/docs/integration/storybook/stories). We take great care to export everything (parameters, variants, general setup) for you to re-use while writing your own [Stories](https://storybook.js.org/docs/react/get-started/whats-a-story). |
+| **Theming** | Finally [some light theming](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/themes.js) gets applied to your **Storybook** instance, based on your **Design Token** set. It should be subdued, but making **Storybook** your own really helps in establishing a sense of ownership! |
+| **Composition** | As part of the left sidebar you have a section titled `@kickstartds/base`, at the very bottom. This gets shown because `@kickstartds/base` is a dependency. **kickstartDS** uses [Storybook composition](https://storybook.js.org/docs/react/sharing/storybook-composition) to always include the base documentation (in the correct version used by your Design System) to your **Storybook**. |
 
 **Design Token** get compiled using the [**kickstartDS CLI**](https://www.kickstartds.com/docs/intro/cli) as [part of your `package.json`](https://github.com/kickstartDS/ds-starter/blob/main/package.json#L22). This converts your **Style Dictionary** from `src/token/dictionary` into all the formats configured in [`sd.config.js`](https://github.com/kickstartDS/ds-starter/blob/main/sd.config.cjs). **Storybook** is [configured to import](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/manager-head.html#L1) our special, annotated `src/token/storybook/tokens.css` (this one includes presenters for **storybook-design-token**) through the [import of the compiled `manager.css`](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/manager.scss#L1).
 
@@ -244,28 +253,30 @@ All the other integrations don't live at **one** central place, but instead requ
 
 - **JSON Schema** integration for the `Button`, loading the dereferenced schema, setting it as a **Story** parameter, and using the `pack` helper throughout [`Button.stories.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L3-L21). The rest is handled by our [**Storybook JSON Schema Addon**](https://storybook.js.org/addons/@kickstartds/storybook-addon-jsonschema/).
 - **Component Token** are integrated by [importing the generated `button-tokens.json`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L5), and then [passing that as a parameter](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L18) to the **Story**. Generation of those files per component is done [in `package.json` here](https://github.com/kickstartDS/ds-starter/blob/main/package.json#L44). The rest is handled again by our own addon: [**Storybook Component Tokens Addon**](https://storybook.js.org/addons/@kickstartds/storybook-addon-component-tokens).
-- **Generated Controls** are enabled by importing the [helpers `getArgsShared` and `pack`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L3), and [using](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L8) [them](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L10) [throughout](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L15-L16) [the](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L24) **Story**. This takes care of generating all the **Storybook Controls** automatically for you, based off our [component APIs](https://www.kickstartds.com/docs/foundations/components/component-api) (the **JSON Schema** definitions).
-- **Premade stories** work by [importing the base **Story**](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L4) first, and [then destructuring them](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L13) into the default export... before setting your [own options as overrides](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L14C22-L20).
+- **Generated Controls** are enabled by importing the [helpers `getArgsShared` and `pack`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L3), and [using](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L8) [them](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L10) [throughout](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L15-L16) [the](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L24) **Story**. This takes care of generating all the **Storybook Controls** automatically for you, based off your [component APIs](https://www.kickstartds.com/docs/foundations/components/component-api) (the **JSON Schema** definitions).
+- **Premade stories** work by [importing the base **Story**](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L4) first, and [then destructuring it](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L13) into the default export... before setting your [own options as overrides](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/Button.stories.jsx#L14C22-L20).
 
 ### **React** integration
 
-There are some **React** concepts already in use deep in **kickstartDS**, and its base components you build upon. This includes using [**Render Props**](https://reactjs.org/docs/render-props.html), and adding [**Context** / **Provider**](https://reactjs.org/docs/context.html) to all components, both to enable flexible and efficient mix-and-match of components.
+There are some **React** concepts already in use deep in **kickstartDS**, and its base components you build upon. This includes using [**Render Props**](https://reactjs.org/docs/render-props.html) and adding [**Context** / **Provider**](https://reactjs.org/docs/context.html) to all components, both to enable flexible and efficient mix-and-match of components.
 
 You can see some examples on how this can be applied in [our docs about it](https://www.kickstartds.com/docs/foundations/components/react). Those concepts also get used throughout our main guide ["Create your Design System"](https://www.kickstartds.com/docs/guides/create/), for example when [adding RTE-rendering to the `Headline`](https://www.kickstartds.com/docs/guides/examples/components/headline#defining-renderfunctions). All components included in this starter are the result of [example guides](https://www.kickstartds.com/docs/guides/examples/).
 
 This also easily enables more advanced integrations for your components to offer, later on. For example, when [integrating with a headless CMS like **Sanity**](https://www.kickstartds.com/docs/integration/react/rich-text-rendering#sanity), and using existing [**Render Props**](https://reactjs.org/docs/render-props.html) to turn our default **Markdown** capable `RichText` component to one specific to [**Sanity**](https://www.sanity.io/), [using `PortableText`](https://github.com/portabletext/portabletext).
 
-For this starter this means having a file [`src/Providers.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/Providers.jsx) in place, that includes all the needed `Provider`s to replace the base components by their customized versions throughout your whole **Design System**. As we've added our own versions of the `Button`, `TeaserBox` and `Section` components in this starter, those are imported and added. You can read more about this `Provider` setup in [one of our guides here](https://www.kickstartds.com/docs/guides/create/components#add-component-providers).
+For this starter this means having a file [`src/Providers.jsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/Providers.jsx) in place, that includes all the needed `Provider`s to replace the base components by their customized versions throughout your whole **Design System**. As we've added our own versions of the `Button`, `TeaserBox` and `Section` components in this starter, those are imported and added. We also [support **Bedrock Layout Primitives**](#bedrock-layout-primitives-integration) out-of-the-box, so that provider gets added, too. You can read more about the `Provider` setup in [one of our guides here](https://www.kickstartds.com/docs/guides/create/components#add-component-providers).
 
 `Provider`s need to be set [for **Storybook**](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L11), both [for previews](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L55-L64) and the [`Docs` container](https://github.com/kickstartDS/ds-starter/blob/main/.storybook/preview.js#L38-L45) to render components properly. This, too, is covered by our [main guide here](https://www.kickstartds.com/docs/guides/create/components#update-storybookpreviewjs).
 
-> :information_source: **When you need `Provider`s**: When you're building a page or application using **React**, you will need to add those `Provider`s to your central layout there.
+> :information_source: **When you need `Provider`s**: When you're building a page or application using **React**, you will need to add those `Provider`s to your central layout there!
 
 ### **Bedrock Layout Primitives** integration
 
-For the most common use cases we include the [`Section` component](https://www.kickstartds.com/storybook/?path=/story/base-section--content-boxes) with **kickstartDS**, and it's adapted for [this **Design System** starter](https://github.com/kickstartDS/ds-starter/blob/main/src/components/section/SectionComponent.tsx), too. It even includes some customizations, described in our component example guide ["Extend `Section` component`](https://www.kickstartds.com/docs/guides/examples/components/section).
+For the most common use cases we include the [`Section` component](https://www.kickstartds.com/storybook/?path=/story/base-section--content-boxes) with **kickstartDS**, and it's adapted for [this **Design System** starter](https://github.com/kickstartDS/ds-starter/blob/main/src/components/section/SectionComponent.tsx), too. It even includes some customizations here, as described in our component example guide ["Extend `Section` component`](https://www.kickstartds.com/docs/guides/examples/components/section).
 
 The `Section` component is especially well suited for marketing and landing pages. It provdides general layout options ("horizontal slices" on a page) for components to be put in. You can see all available options here: [**Storybook** Docs for `Section`](https://www.kickstartds.com/storybook/?path=/docs/base-section--content-boxes).
+
+We also cover the `Section`, and some example uses, in more detail in our ["Layout" section of the docs](https://www.kickstartds.com/docs/foundations/layout/sections).
 
 <p align="center">
   <picture>
@@ -309,7 +320,7 @@ With this starter we want to cover the complete life-cycle of a **Design System*
 
 Because you can either use a **Design System** based on **kickstartDS** by working with **React** templates directly, or by alternatively using **CSS** and **JavaScript** bundles to be used with the raw markup generated by components... both cases are covered in this starter.
 
-It's also quite common for both types of usage to coexist for your **Design System**. Your main marketing page might be build with a headless CMS and a modern stack using **React**, while some arcane internal tooling might still use **PHP** for its templating. This setup enables you to serve both!
+It's also quite common for both types of usage to coexist for your **Design System**. Your main marketing page might be built with a headless CMS and a modern stack using **React**, while some arcane internal tooling might still use **PHP** for its templating. This setup enables you to serve both!
 
 All bundling is handled by [the `dist:*` tasks](https://github.com/kickstartDS/ds-starter/blob/main/package.json#L24-L31) in `package.json`.
 
@@ -337,7 +348,7 @@ We will probably expand on this section, when we have a better picture of everyo
 
 ## Content
 
-We've described all the features extensively now. To wrap up this **README** let's quickly summarize everything included from a "content" perspective: **Components**, **Pages** and **Docs**.
+We've described all the features extensively now. To wrap up this **README** let's quickly summarize everything included from a "content" perspective: **Components**, **Pages**, **Recipes** and **Docs**.
 
 ### Components
 
