@@ -24,8 +24,8 @@ const Page = () => (
             "lightboxImage": {
               "image": "img/screenshot-ds.png",
               "thumb": "img/screenshot-ds.png",
-              "width": 1280,
-              "height": 853,
+              "width": 1904,
+              "height": 903,
               "zoomIcon": true,
             }
           }
@@ -181,21 +181,21 @@ Learn more about release handling in [the dedicated docs section](https://www.ki
         text="#tldr: Design Token are all the rage these days. In almost every channel from the Design System space, you can feel a crispy white noise around the broad topic of Design Token..."
         target="https://www.kickstartds.com/blog/release-spotlight-semantic-token/"
         image="https://www.kickstartds.com/static/95c85bb44b1a2efbe2b33e75b99754bd/Blog-Post_Release-Notes-01-1.png"
-        inverted={true}
+        inverted={false}
       />
       <TeaserCard
         headline="Release Spotlight: Container Queries"
         text="#tldr: Container Queries are another new feature coming with the Open Source release of kickstartDS. It's a proposed feature for CSS that allows the styling of elements to be..."
         target="https://www.kickstartds.com/blog/release-spotlight-container-queries/"
         image="https://www.kickstartds.com/static/3d484cc97ab1a34975e6abaa6dc28fed/Blog-Post_Release-Spotlight-02.png"
-        inverted={true}
+        inverted={false}
       />
       <TeaserCard
         headline="Release Spotlight: Documentation &amp; Starter"
-        text="#tldr: Container Queries are another new feature coming with the Open Source release of kickstartDS. It's a proposed feature for CSS that allows the styling of elements to be..."
-        target="https://www.kickstartds.com/blog/release-spotlight-container-queries/"
-        image="https://www.kickstartds.com/static/3d484cc97ab1a34975e6abaa6dc28fed/Blog-Post_Release-Spotlight-02.png"
-        inverted={true}
+        text="#tldr We’ve added extensive documentation around the creation of Design Systems with kickstartDS. From general intro and foundation articles and component example guides to our..."
+        target="https://www.kickstartds.com/blog/release-spotlight-documentation-starter/"
+        image="https://www.kickstartds.com/static/18e344141b89464fc885591443650ee6/Blog-Post_Release-Spotlight-03.png"
+        inverted={false}
       />
     </Section>
 

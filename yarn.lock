@@ -11223,10 +11223,10 @@ junk@^3.1.0:
   resolved "https://registry.npmjs.org/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-kickstartds@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/kickstartds/-/kickstartds-1.0.3.tgz#7d90dbcb06b1df7bd2ebd2b549405229bd998f36"
-  integrity sha512-9WN46u6+gIgzjfdrmm7FSUQjsiLBN1MuahInRzkxUvykyPrhd0EOyIk6MwMFmi723a3wWlqAh13VlU0UNs8Kuw==
+kickstartds@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/kickstartds/-/kickstartds-1.0.4.tgz#8459ed271cb9a01b3879e7b72f21a88df948f016"
+  integrity sha512-uymqTZ73P7PsEtmt8eu7Q4BYZccRUFpvbgujKtlI8rNlXVehSfv3bXOMf7E6BdFX7xxV5hgpNWBxJ2ZUSpjTzQ==
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.9"
     "@babel/preset-react" "^7.17.12"

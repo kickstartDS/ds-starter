@@ -7,7 +7,11 @@
   </a>
 </p>
 
-# kickstartDS Starter
+# kickstartDS Starter - Only 5 minutes, 5 steps...
+
+**... to your own Design System!**
+
+Benefit by **best practices** and **defaults** immediately. **Focus on** what makes **you** unique, instead of doing chores!
 
 [kickstartDS](https://www.kickstartDS.com) is a low-code framework and comprehensive component library enabling development teams to create consistent and brand compliant web frontends super efficiently.
 
@@ -19,7 +23,7 @@ The **kickstartDS Starter** is your most efficient way of kickstarting a **Desig
 
 Skip ahead to:
 
-- [kickstartDS Starter](#kickstartds-starter)
+- [kickstartDS Starter - Only 5 minutes, 5 steps...](#kickstartds-starter---only-5-minutes-5-steps)
   - [About](#about)
   - [Overview](#overview)
     - [Feature list](#feature-list)
@@ -226,7 +230,7 @@ You can also have a look at our **Figma** token file visualizing exactly that to
 <p align="center">
   <a href="assets/figma-cover.png" target="_blank"><img src="assets/figma-cover.png" width="20%" alt="Figma file cover" title="Figma file cover"></img></a> <a href="assets/figma-colors.png" target="_blank"><img src="assets/figma-colors.png" alt="Figma colors" title="Figma colors" width="20%"></img></a> <a href="assets/figma-spacing.png" target="_blank"><img src="assets/figma-spacing.png" alt="Figma spacing" title="Figma spacing" width="20%"></img></a> <a href="assets/figma-typo.png" target="_blank"><img src="assets/figma-typo.png" alt="Figma typo" title="Figma typo" width="20%"></img></a> 
   <br>
-  <a href="#" target="_blank">View <strong>Figma</strong> file</a>
+  <a href="https://www.figma.com/file/2nRO6XaRhIlRD9TEiCq1gP/kickstartDS-Design-Token-Blog-Example?node-id=0%3A1&t=7TOpDJB0jj3DbhkC-1" target="_blank">View <strong>Figma</strong> file</a>
 </p>
 
 To learn more about **Design Token** and their support in **kickstartDS** read our first release spotlight: [Release Spotlight: Semantic Token](https://www.kickstartds.com/blog/release-spotlight-semantic-token/).
@@ -285,7 +289,7 @@ We also cover the `Section`, and some example uses, in more detail in our ["Layo
   </picture>
 </p>
 
-When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter](https://github.com/kickstartDS/ds-starter/blob/main/src/bedrock/). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock)
+When you have more general layout needs, not covered by simply using a `Section` component, we usually recommend using [**Bedrock Layout Primitives**](https://www.bedrock-layout.dev/) for those cases. We think it meshes really well with our approach to **Design Token**, you simply connect your existing **Design Token** set [to their theming approach](https://www.bedrock-layout.dev/?path=/docs/getting-started-lesson-3-spacing--page). We already provide such an [integration with this starter](https://github.com/kickstartDS/ds-starter/blob/main/src/bedrock/). You can read about this combination in more detail on our ["Foundations"](https://www.kickstartds.com/docs/foundations/) page [about **Bedrock Layout Primitives**](https://www.kickstartds.com/docs/foundations/layout/bedrock).
 
 To learn more about **Bedrock Layout Primitves** and why, when and how to use it with **kickstartDS**, and when **Container Queries** might actually be preferrable, you can also read our second release spotlight: [Release Spotlight: Container Queries](https://www.kickstartds.com/blog/release-spotlight-container-queries/).
 
@@ -359,7 +363,7 @@ As described in the very intro to this **README**, all the included components s
 | `Button` | [`src/components/button/ButtonComponent.tsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/button/ButtonComponent.tsx) | [Adapt `Button` component](https://www.kickstartds.com/docs/guides/examples/components/button) | [Adapt a component](https://www.kickstartds.com/docs/guides/components/adapt) |
 | `Headline` | [`src/components/headline/HeadlineComponent.tsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/headline/HeadlineComponent.tsx) | [Customize `Headline` component](https://www.kickstartds.com/docs/guides/examples/components/headline) | [Customize a component](https://www.kickstartds.com/docs/guides/components/customize) |
 | `TeaserCard` | [`src/components/teaser-card/TeaserCardComponent.tsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/teaser-card/TeaserCardComponent.tsx) | [Create `TeaserCard` component](https://www.kickstartds.com/docs/guides/examples/components/teaser-card) | [Create a component](https://www.kickstartds.com/docs/guides/components/create)|
-| `Section` | [`src/components/section/SectionComponent.tsx`]() | [Extend `Section` component](https://www.kickstartds.com/docs/guides/examples/components/section) | [Extend a component](https://www.kickstartds.com/docs/guides/components/extend) |
+| `Section` | [`src/components/section/SectionComponent.tsx`](https://github.com/kickstartDS/ds-starter/blob/main/src/components/section/SectionComponent.tsx) | [Extend `Section` component](https://www.kickstartds.com/docs/guides/examples/components/section) | [Extend a component](https://www.kickstartds.com/docs/guides/components/extend) |
 
 ### Recipes
 
@@ -374,7 +378,7 @@ There is one **Page** currently included with this starter in [`src/pages/Demo.s
 
 ### Docs
 
-There are two docs pages (the [**Welcome** page](https://github.com/kickstartDS/ds-starter/blob/main/docs/welcome.stories.mdx) and the [**Integration** page](https://github.com/kickstartDS/ds-starter/blob/main/docs/integration.stories.mdx)), and [documentation for all token]() from your **Design Token** set, included with this starter. Feel free to add further docs pages to your **Design System** in [`docs/`](https://github.com/kickstartDS/ds-starter/tree/main/docs).
+There are two docs pages (the [**Welcome** page](https://github.com/kickstartDS/ds-starter/blob/main/docs/welcome.stories.mdx) and the [**Integration** page](https://github.com/kickstartDS/ds-starter/blob/main/docs/integration.stories.mdx)), and [documentation for all token](#design-token-integration) from your **Design Token** set, included with this starter. Feel free to add further docs pages to your **Design System** in [`docs/`](https://github.com/kickstartDS/ds-starter/tree/main/docs).
 
 ## Scripts
 

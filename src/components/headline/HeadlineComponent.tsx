@@ -1,10 +1,8 @@
 import classnames from "classnames";
 import { HTMLAttributes, FC, PropsWithChildren } from "react";
 
-import ReactDom from 'react-dom';
 import ReactMarkdown from 'react-markdown';
 
-import { RichText } from "@kickstartds/base/lib/rich-text";
 import { HeadlineContext } from "@kickstartds/base/lib/headline";
 import { defaultRenderFn } from "@kickstartds/core/lib/core";
 
