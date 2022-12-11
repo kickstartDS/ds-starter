@@ -5,9 +5,35 @@
  * and run `yarn run schema` to regenerate this file.
  */
 
+/**
+ * Text content to display inside the button
+ */
+export type Label = string;
+/**
+ * Target that should be linked, makes the button behave like a link semantically
+ */
+export type Target = string;
+/**
+ * Variant of button to be used
+ */
+export type Variant = "primary" | "secondary" | "tertiary";
+/**
+ * Size of button to use
+ */
+export type Size = "small" | "medium" | "large";
+/**
+ * Whether the button should be disabled
+ */
+export type Disabled = boolean;
+
+/**
+ * Component used for user interaction
+ */
 export interface ButtonProps {
-  label: string;
-  href: string;
-  icon?: "chevron-right" | "close" | "none";
-  variant: "solid" | "clear" | "outline";
+  label: Label;
+  target?: Target;
+  variant?: Variant;
+  size?: Size;
+  disabled?: Disabled;
+  [k: string]: unknown;
 }

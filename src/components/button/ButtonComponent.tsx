@@ -3,19 +3,33 @@ import {
   ButtonContextDefault,
   ButtonContext,
 } from "@kickstartds/base/lib/button";
+
 import { ButtonProps } from "./ButtonProps";
 
 export const Button = forwardRef<
   HTMLAnchorElement | HTMLButtonElement,
   ButtonProps & HTMLAttributes<HTMLElement>
->(({ icon, variant, label, href, ...props }, ref) => (
+>(({
+  label,
+  target,
+  size = "medium",
+  variant = "secondary",
+  disabled = false,
+  ...props
+}, ref) => (
   <ButtonContextDefault
     {...props}
-    iconBefore={icon && icon !== "none" ? { icon } : undefined}
-    href={href}
+    href={target}
     label={label}
-    size={"medium"}
-    variant={variant}
+    size={size}
+    variant={
+      variant === 'primary'
+        ? 'solid'
+        : variant === 'secondary'
+          ? 'outline'
+          : 'clear'
+    }
+    disabled={disabled}
     ref={ref}
   />
 ));

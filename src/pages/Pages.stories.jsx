@@ -1,5 +1,5 @@
 export default {
-  title: "Pages",
+  title: "Pages/Demo",
   parameters: {
     layout: "fullscreen",
     previewTabs: {

@@ -1,8 +1,6 @@
-import merge from "deepmerge";
 import { Button } from "./ButtonComponent";
-import { pack, getArgsShared } from "@kickstartds/core/lib/storybook";
+import { pack, getArgsShared } from "@kickstartds/core/lib/storybook/helpers";
 import ButtonStories from "@kickstartds/base/lib/button/button.stories";
-import tokens from "./button-tokens.json";
 import schema from "./button.schema.dereffed.json";
 
 const { args, argTypes } = getArgsShared(schema);
@@ -11,29 +9,48 @@ const Template = (args) => <Button {...args} />;
 
 export default {
   ...ButtonStories,
-  title: "DS/Button",
+  title: "Components/Button",
   args,
   argTypes,
   parameters: {
-    cssprops: merge(ButtonStories.parameters.cssprops, tokens),
     jsonschema: schema,
   },
 };
 
-export const IconArrow = Template.bind({});
-IconArrow.args = pack({
-  label: "More info",
-  icon: "chevron-right",
+export const NativeButton = Template.bind({});
+NativeButton.args = pack({
+  label: "Native Button",
+  variant: "primary",
 });
 
-export const IconDelete = Template.bind({});
-IconDelete.args = pack({
-  label: "Delete",
-  icon: "close",
+export const LinkButton = Template.bind({});
+LinkButton.args = pack({
+  label: "Link Button",
+  variant: "secondary",
+  target: "#",
 });
 
-export const WithoutIcon = Template.bind({});
-WithoutIcon.args = pack({
-  label: "Select",
-  icon: "none",
+export const DisabledButton = Template.bind({});
+DisabledButton.args = pack({
+  label: "Disabled Button",
+  variant: "primary",
+  disabled: true,
+});
+
+export const PrimaryButton = Template.bind({});
+PrimaryButton.args = pack({
+  label: "Primary Button",
+  variant: "primary",
+});
+
+export const SecondaryButton = Template.bind({});
+SecondaryButton.args = pack({
+  label: "Secondary Button",
+  variant: "secondary",
+});
+
+export const TertiaryButton = Template.bind({});
+TertiaryButton.args = pack({
+  label: "Tertiary Button",
+  variant: "tertiary",
 });
