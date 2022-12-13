@@ -189,7 +189,7 @@ If unsure on what components you actually need, or which ones to tackle first, y
 
 ### Dig into our docs
 
-We have added a lot of links to specific docs sections in all the other paragraphs already. But they deserve a special mention here. Creating a **Design System** can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, especially when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommondations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
+We have added a lot of links to specific docs sections in all the other paragraphs already. But they deserve a special mention here. Creating a **Design System** can be both highly custom and opinionated. This is why we think explaining our reasoning in detail, especially when we take decisions for you (like using **Style Dictionary**), is super important. And for areas where there is no clear cut decision to take, we always try to add recommendations (like how to best construct your components to [avoid adding technical debt](https://www.kickstartds.com/docs/guides/components/#technical-debt-added)) instead.
 
 Some quick links to get you started:
 
@@ -199,7 +199,7 @@ Some quick links to get you started:
 | https://www.kickstartds.com/docs/intro/ | Super general introduction of **kickstartDS**, including **YouTube** explanation |
 | https://www.kickstartds.com/docs/foundations/ | Foundational info about the structure and architecture of **kickstartDS** |
 | https://www.kickstartds.com/docs/integration/ | Info about the ways **kickstartDS** integrates with other tooling and systems |
-| https://www.kickstartds.com/docs/guides/ | Focussed guides, categorized into the main areas of a **Design System**|
+| https://www.kickstartds.com/docs/guides/ | Focused guides, categorized into the main areas of a **Design System**|
 | https://www.kickstartds.com/docs/guides/create/ | Main guide, also a great reference for the reasoning behind this starter|
 | https://www.kickstartds.com/docs/feedback/ | All the ways you can provide feedback to us, which we value a lot!|
 
